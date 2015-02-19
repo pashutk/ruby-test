@@ -1,0 +1,371 @@
+---
+layout: layout
+title: Site title
+description: Site description
+keywords: Site keywords
+---
+script src="http://www.inmyroom.ru/assets/application-2ade3b272e7e65044735cb8089516ab2.js"
+#page.page.admin
+  nav#sidemenu
+    .header
+      div class="userpanel_hamburger"
+        div
+        div
+        div
+      span Меню
+    ul.main
+      li
+        .title Статьи и новости
+        ul.list
+      li.active
+        .title Фотографии
+        ul.list
+          li
+            a href="#" Модерация
+          li.active
+            a href="#" Технические
+          li
+            a href="#" К комментариям
+
+
+  .subnav
+    .subnav_inner
+      .container.clearfix
+        .mavrin-logo
+        .service-select.filter-inline__index
+          a.selector.filter-inline_item-price InMyRoom.ru
+          ul.dropdown
+            li
+              a href="#" InMyRoom.ru
+            li
+              a href="#" KitchenMag
+
+        .user-info
+          span.username Андрей Иванов
+          | /
+          span.role Администратор
+  #main
+    .page-index
+      .page-index-aside
+        form.filter.filter-admin
+          .filter-section
+            .filter-title Статьи
+            ul.filter-list
+              li
+                a href="#"
+                  | На модерации
+                  span.nums 8
+              li.selected
+                a href="#"
+                  | Отмодерированы
+                  span.nums 133 343
+              li
+                a href="#"
+                  | Отклонено
+                  span.nums 137 443
+          .filter-section
+            .filter-title Категория витрины
+            ul.filter-list
+              li
+                a href="#"
+                  | Все
+                  span.nums 150
+              li.selected
+                a href="#"
+                  | Кухня и столовая
+                  span.nums 13
+              li
+                a href="#"
+                  | Ванная
+                  span.nums 137
+          .filter-section
+            .filter-title От компаний
+            ul.filter-list
+              li
+                a href="#"
+                  | Ikea
+                  span.nums 15
+              li.selected
+                a href="#"
+                  | Мир света
+                  span.nums 13
+              li
+                a href="#"
+                  | Hoff
+                  span.nums 17
+        form.filter.filter-admin.filter-selected
+          .filter-section
+            .filter-title
+              | Выбранное
+              span.nums
+                | (2 шт)
+            ul.filter-list
+              li
+                a href="#" Удалить
+              li.selected
+                a href="#" Отклонить
+
+      .page-index-content#index-content
+        h1 class="page-index-title"
+          | ФОТОГРАФИИ:
+          nobr
+            | На модерации
+            span.nums 8
+        .filter-inline
+          .filter-title.filter-content-results
+            | Результатов:
+            span.nums 10
+          .filter-title.filter-content-toggler По времени
+          .filter-title.filter-content-pagination
+            |Показывать:
+            a href="#" 25
+            a.active href="#" 50
+            a href="#" 100
+            a href="#" Все
+        #index.photos
+          .photo
+            .photo-inner
+              .image
+                img src="assets/images/Модерация-товара.jpg"
+                .comment
+                  span.header Комментарий:
+                  | Отличная комната получилась, смотрите на www.spb.ru
+                div.checkbox
+                  input name="user[show_email]" type="hidden" value="0"
+                  input class="form-control" data-unstyled="true" id="user_show_email" name="user[show_email]" type="checkbox" value="1"
+                  label for="user_show_email"
+              .settings
+                .settings-section
+                  .settings-title.opened
+                    | Категория фото:
+                    span.param Не выбрана
+                  ul.settings-list
+                    p
+                      span.header Стили:
+                      |Классический, Прованс, Хайтек
+                    div
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email1" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email1" Эклектика
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email2" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email2" Скандинавский
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email3" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email3" Кантри
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email4" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email4" Современный
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email5" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email5" Классический
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email6" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email6" Хай-тек
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email7" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email7" Лофт
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email8" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email8" Восточный
+                      .clearfix
+                    div.radios
+                      .radio
+                        input#radio1 type="radio" name="radio1" hidden="true" checked="true"
+                        label for="radio1" Профессиональная
+                      .radio
+                        input#radio2 type="radio" name="radio1" hidden="true"
+                        label for="radio2" Любительская
+                      .radio
+                        input#radio3 type="radio" name="radio1" hidden="true"
+                        label for="radio3" Рендер
+                      .clearfix
+                .settings-section
+                  .settings-title
+                    | Размер комнаты:
+                    span.param Не выбрана
+                  ul.settings-list
+                    p
+                      span.header Стили:
+                      |Классический, Прованс, Хайтек
+                    div
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email12" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email12" Эклектика
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email22" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email22" Скандинавский
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email32" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email32" Кантри
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email42" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email42" Современный
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email52" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email52" Классический
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email62" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email62" Хай-тек
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email72" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email72" Лофт
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email82" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email82" Восточный
+                      .clearfix
+                    div.radios
+                      .radio
+                        input#radio12 type="radio" name="radio2" hidden="true" checked="true"
+                        label for="radio12" Профессиональная
+                      .radio
+                        input#radio22 type="radio" name="radio2" hidden="true"
+                        label for="radio22" Любительская
+                      .radio
+                        input#radio32 type="radio" name="radio2" hidden="true"
+                        label for="radio32" Рендер
+                      .clearfix
+                .settings-section
+                  .settings-title
+                    | Материал пола:
+                    span.param Не выбрана
+                  ul.settings-list
+                    p
+                      span.header Стили:
+                      |Классический, Прованс, Хайтек
+                    div
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email13" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email13" Эклектика
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email23" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email23" Скандинавский
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email33" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email33" Кантри
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email43" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email43" Современный
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email53" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email53" Классический
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email63" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email63" Хай-тек
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email73" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email73" Лофт
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email83" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email83" Восточный
+                      .clearfix
+                    div.radios
+                      .radio
+                        input#radio13 type="radio" name="radio3" hidden="true" checked="true"
+                        label for="radio13" Профессиональная
+                      .radio
+                        input#radio23 type="radio" name="radio3" hidden="true"
+                        label for="radio23" Любительская
+                      .radio
+                        input#radio33 type="radio" name="radio3" hidden="true"
+                        label for="radio33" Рендер
+                      .clearfix
+
+
+              .clearfix
+              .posr
+                .submit
+                  button#no Отклонить
+                  button#yes Утвердить
+            .admin-events
+              a href="#" Удалить
+              a href="#" Отменить
+              a href="#" Сохранить
+
+          .photo
+            .photo-inner
+              .image
+                img src="assets/images/Модерация-товара.jpg"
+                .comment
+                  span.header Комментарий:
+                  | Отличная комната получилась, смотрите на www.spb.ru
+                div.checkbox
+                  input name="user[show_email]" type="hidden" value="0"
+                  input class="form-control" data-unstyled="true" id="user_show_email0" name="user[show_email]" type="checkbox" value="1"
+                  label for="user_show_email0"
+              .settings
+                .info
+                  b Склад:
+                  |Салфетки (
+                  a href="#" сменить
+                  |)
+                .settings-section
+                  .settings-title.opened
+                    | Комната/Назначение:
+                    span.param Не выбрана
+                  ul.settings-list
+                    p.title
+                      span.header Стили:
+                      |Классический, Прованс, Хайтек
+                    div
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email10" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email10" Эклектика
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email20" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email20" Скандинавский
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email30" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email30" Кантри
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email40" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email40" Современный
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email50" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email50" Классический
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email60" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email60" Хай-тек
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email70" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email70" Лофт
+                      div.checkbox
+                        input class="form-control" data-unstyled="true" id="user_show_email80" name="user[show_email]" type="checkbox" value="1"
+                        label for="user_show_email80" Восточный
+                      .clearfix
+                    p.title.mb10
+                      span.header Гамма
+                    div.colors
+                      div.checkbox
+                        input#color1 type="checkbox" value="1"
+                        label for="color1" style="background-color:white;"
+                      div.checkbox
+                        input#color2 type="checkbox" value="1"
+                        label for="color2" style="background-color:#be6428;"
+                      div.checkbox
+                        input#color3 type="checkbox" value="1"
+                        label for="color3" style="background-color:#4a7f31;"
+                      div.checkbox
+                        input#color4 type="checkbox" value="1"
+                        label for="color4" style="background-color:#be6428;"
+                      div.checkbox
+                        input#color5 type="checkbox" value="1"
+                        label for="color5" style="background-color:black;"
+
+
+              .clearfix
+              .posr
+                .submit
+                  button#no Отклонить
+                  button#yes Утвердить
+            .admin-events
+              a href="#" Удалить
+              a href="#" Отменить
+              a href="#" Сохранить
+
+
+
+
+
+
+

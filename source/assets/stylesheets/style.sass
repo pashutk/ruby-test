@@ -1,0 +1,421 @@
+@charset "utf-8"
+
+
+// Bourbon & Neat
+@import bourbon
+@import neat
+
+// Normalize
+@import options/normalize
+
+// Variables
+@import variables/common
+@import variables/color
+
+// Mixin
+@import mixin
+
+@import app.css
+
+// Common Styles
+*
+  box-sizing: border-box
+
+@font-face
+  font-family: $font_0
+  src: url($data_uri_0) format("woff")
+  font-weight: normal
+  font-style: normal
+
+body
+  background-color: paletet("bg", "base")
+  color: palette("font", "base")
+  font-family: 'Proxima Nova'
+
+
+.mavrin-logo
+  width: 127px
+  height: 24px
+  background-image: url('data:image/png;base64,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')
+  background-repeat: no-repeat
+  display: inline-block
+  margin-top: 15px
+  vertical-align: middle
+
+ul.filter-list
+  li
+    a
+      span
+        color: #ccc
+        margin-left: 10px
+
+form.filter.filter-admin
+  li:after
+    border-radius: 0 3px 3px 0
+  .filter-section:after
+    content: none
+
+form.filter.filter-admin.filter-selected
+  background-color: #ffd4d4
+  .filter-section
+    .filter-title
+      .nums
+        color: #900
+        margin-left: 10px
+        font-weight: normal
+        text-transform: none
+  &:before
+    content: ''
+    display: block
+    background-color: #900
+    height: 2px
+    position: absolute
+    top: 0
+    width: 100%
+    left: 0
+    box-shadow: 0px 0.5px 1px -0.5px #900
+  li:after
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, #ffd4d4 50%, #ffd4d4 100%)
+
+  li:hover:after
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,#ffffff 50%,#ffffff 100%)
+.filter-list:not(:hover)>li.selected:after
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,#ffffff 50%,#ffffff 100%) !important
+
+
+.page-index-content>.page-index-title
+  margin-top: 0
+  nobr
+    text-transform: none
+    margin-left: 10px
+    span.nums
+      color: #ccc
+      margin-left: 10px
+
+.mb10
+  margin-bottom: 10px
+
+
+.service-select.filter-inline__index
+  display: inline-block
+  margin-left: 20px
+  padding-left: 20px
+  height: 40px
+  line-height: 40px
+
+  margin-top: 12.5px
+  vertical-align: middle
+  position: relative
+  border-left: 1px solid
+  ul.dropdown
+    display: none
+    position: absolute
+  a.selector
+    position: relative
+    cursor: pointer
+    font-weight: 600
+    color: black
+    &:after
+      border-top-color: #900
+      top: 8px
+
+.checkbox label:after
+  background-position: -91px 0
+
+.checkbox label:hover
+  color: #666
+
+.radio
+  label
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    &:hover
+      color: #666
+  input+label:before
+    margin-right: 8px
+    vertical-align: middle
+    content: ''
+    display: inline-block
+    height: 13px
+    width: 13px
+    border-radius: 50%
+    border: 1px solid #ccc
+    background-color: white
+  input:checked+label:before
+    border-color: #900
+  input:checked+label:after
+    content: ""
+    display: inline-block
+    position: absolute
+    left: 4px
+    top: 6px
+    width: 5px
+    height: 5px
+    background-color: black
+    border-radius: 50%
+
+.posr
+  position: relative
+
+.admin
+  #sidemenu
+    display: block
+    position: fixed
+    left: 0
+    top: 0
+    width: 220px
+    height: 100%
+    background-color: #66798a
+    z-index: 100
+    color: white
+    transition: left .5s ease
+    &.hidden
+      left: -220px
+    >.header
+      height: 65px
+      background-color: #41505e
+      font-size: 20px
+      line-height: 65px
+      font-weight: bold
+      .userpanel_hamburger
+        margin-top: 25px
+        margin-left: 23px
+        margin-right: 10px
+        cursor: pointer
+        div
+          background-color: white
+    >ul.main
+      li
+        height: 35px
+        line-height: 35px
+        font-size: 16px
+        font-weight: bold
+        &:hover
+          background-color: lighten(#66798a, 10%)
+        .title
+          padding-left: 20px
+          cursor: pointer
+        a
+          display: inline-block
+          width: 100%
+          height: 100%
+          color: white
+        &.active
+          color: black
+          background-color: #ffc200
+          &:hover
+            background-color: lighten(#ffc200, 10%)
+          a
+            color: black
+          ul.list
+            background-color: #ffd54f
+            li
+              padding-left: 35px
+              &:hover
+                background-color: lighten(#ffd54f, 10%)
+            li.active
+              background-color: #ffefbe
+              &:hover
+                background-color: lighten(#ffefbe, 10%)
+  .subnav
+    .subnav_inner
+      height: 65px
+      .user-info
+        position: absolute
+        width: auto
+        right: 0
+        top: 0
+        line-height: 65px
+        height: 65px
+  .filter-inline
+    margin-top: 25px
+    border-bottom: 1px solid #cccccc
+    position: relative
+    .filter-title
+      text-transform: none
+      display: inline-block
+      margin-right: 10px
+    .filter-content-toggler:after
+      background-position: -27px -22px
+    .filter-content-toggler:hover:after
+      background-position: -14px -22px
+    .filter-title.filter-content-results
+      font-weight: normal
+      color: #888
+      span.nums
+        margin-left: 5px
+        color: black
+      &:before
+        cursor: pointer
+        padding-left: 1px
+        margin-right: 3px
+        content: '—'
+        color: #900
+        background-color: #f8f8f8
+        border: 1px solid #ccc
+        height: 15px
+        width: 15px
+        text-align: center
+        line-height: 13px
+        display: inline-block
+        font-size: 11px
+    .filter-title.filter-content-pagination
+      position: absolute
+      top: 0
+      right: 0
+      font-weight: normal
+      color: #888
+      a
+        margin-left: 5px
+        font-weight: normal
+        color: #888
+        &.active,
+        &:hover
+          color: black
+
+  #index.photos
+    .photo
+      display: block
+      width: 100%
+      margin-bottom: 20px
+    .photo-inner
+      display: block
+      width: 100%
+      background-color: #f4f4f4
+      .image
+        width: 50%
+        float: left
+        position: relative
+        .comment
+          padding: 15px
+          background-color: white
+          border: 3px solid #f4f4f4
+          border-top-width: 0
+          margin-top: -3px
+          border-right-width: 0
+          span.header
+            font-size: 13px
+            font-weight: bold
+            display: block
+            text-transform: uppercase
+        >.checkbox
+          position: absolute
+          top: 7px
+          left: 7px
+          label:after
+            background-position: -91px 0
+
+      .settings
+        background-color: #f4f4f4
+        width: 50%
+        float: left
+        position: relative
+        padding: 20px
+        padding-bottom: 45px
+        .info
+          margin-bottom: 10px
+          b
+            margin-right: 5px
+          a
+            color: #1676d2
+            &:hover
+              border-bottom: 1px solid
+        .settings-section
+          .settings-title
+            margin-bottom: 5px
+            font-size: 13px
+            color: #000
+            font-weight: bold
+            text-transform: uppercase
+            padding: 8px 12px
+            background-color: #ffffff
+            border-radius: 3px
+            cursor: pointer
+            &:before
+              display: inline-block
+              background: url(/assets/icon-s8a66015a0e-f4e3fa7b14b9920e84268fcf92474449.png) -27px -22px no-repeat
+              height: 8px
+              width: 13px
+              content: ""
+              margin-right: 5px
+            .param
+              color: #888
+              font-weight: normal
+              text-transform: none
+              margin-left: 5px
+          .settings-title.opened+.settings-list
+            display: block
+          .settings-list
+            display: none
+            p
+              margin-top: 15px
+              color: #888
+              span.header
+                font-size: 13px
+                font-weight: bold
+                margin-right: 5px
+                color: black
+                text-transform: uppercase
+            .checkbox
+              display: inline-block
+              vertical-align: top
+              margin-left: 4%
+              width: 46%
+              float: left
+            .colors
+              .checkbox
+                display: inline-block
+                float: left
+                width: 20%
+                margin: 0
+                label
+                  width: 100%
+                  height: 12px
+                  margin-top: 30px
+                  &:before
+                    top: -30px
+                    left: 50%
+                    margin-left: -9px
+                  &:after
+                    top: -25px
+                    left: 50%
+                    margin-left: -7px
+            .radios
+              margin: 15px 0
+              .radio
+                width: 50%
+                float: left
+    .submit
+      position: absolute
+      bottom: 10px
+      right: 10px
+      button
+        display: inline-block
+        margin-left: 10px
+        border: 0
+        outline: 0
+        border-radius: 3px
+        padding: 5px 19px
+        color: white
+      button#no
+        background-color: #900
+        &:hover
+          background-color: lighten(#900, 10%)
+      button#yes
+        background-color: #346f18
+        &:hover
+          background-color: lighten(#346f18, 10%)
+    .admin-events
+      padding: 10px 0
+      text-align: right
+      a
+        margin: 0 5px
+        &:hover
+          border-bottom: 1px solid #888
+          color: #888
+
+
+
+
+
