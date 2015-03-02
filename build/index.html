@@ -20,40 +20,6 @@
   <body class="index">
     <script src="http://www.inmyroom.ru/assets/application-2ade3b272e7e65044735cb8089516ab2.js"></script>
     <div id="page" class="page admin">
-      <nav id="sidemenu">
-        <div class="header">
-          <div class="userpanel_hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <span>Меню</span>
-        </div>
-        <ul class="main">
-          <li>
-            <div class="title">
-              Статьи и новости
-            </div>
-            <ul class="list"></ul>
-          </li>
-          <li class="active">
-            <div class="title">
-              Фотографии
-            </div>
-            <ul class="list">
-              <li>
-                <a href="#">Модерация</a>
-              </li>
-              <li class="active">
-                <a href="#">Технические</a>
-              </li>
-              <li>
-                <a href="#">К комментариям</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
       <div class="subnav">
         <div class="subnav_inner">
           <div class="container clearfix">
@@ -69,7 +35,7 @@
                 </li>
               </ul>
             </div>
-            <div class="user-info">
+            <div class="subnav_user-info">
               <span class="username">Андрей Иванов</span>/<span class="role">Администратор</span>
             </div>
           </div>
@@ -160,72 +126,85 @@
               </div>
             </div>
             <div id="index" class="photos">
-              <div class="photo">
-                <div class="photo-inner">
-                  <div class="image">
+              <div class="moderate-photo">
+                <div class="moderate-photo_inner">
+                  <div class="moderate-photo_figure">
                     <img src="assets/images/Модерация-товара.jpg">
-                    <div class="comment">
+                    <div class="moderate-photo_comment">
                       <span class="header">Комментарий:</span>Отличная комната получилась, смотрите на www.spb.ru
                     </div>
                     <div class="checkbox">
                       <input name="user[show_email]" type="hidden" value="0"><input class="form-control" data-unstyled="true" id="user_show_email" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email"></label>
                     </div>
+                    <div class="moderate-photo_scale"></div>
                   </div>
-                  <div class="settings">
-                    <div class="settings-section">
-                      <div class="settings-title opened">
+                  <div class="moderate-photo_settings">
+                    <div class="moderate-photo_settings_section">
+                      <div class="moderate-photo_settings_title opened">
                         Категория фото:<span class="param">Не выбрана</span>
                       </div>
-                      <ul class="settings-list">
-                        <p>
-                          <span class="header">Стили:</span>Классический, Прованс, Хайтек
-                        </p>
-                        <div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email1" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email1">Эклектика</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email2" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email2">Скандинавский</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email3" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email3">Кантри</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email4" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email4">Современный</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email5" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email5">Классический</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email6" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email6">Хай-тек</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email7" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email7">Лофт</label>
-                          </div>
-                          <div class="checkbox">
-                            <input class="form-control" data-unstyled="true" id="user_show_email8" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email8">Восточный</label>
-                          </div>
-                          <div class="clearfix"></div>
+                      <ul class="moderate-photo_settings_list">
+                        <div class="radio">
+                          <input id="radioq1" type="radio" name="radioq" hidden="true" checked="true"><label for="radioq1">Кухня</label>
                         </div>
-                        <div class="radios">
-                          <div class="radio">
-                            <input id="radio1" type="radio" name="radio1" hidden="true" checked="true"><label for="radio1">Профессиональная</label>
-                          </div>
-                          <div class="radio">
-                            <input id="radio2" type="radio" name="radio1" hidden="true"><label for="radio2">Любительская</label>
-                          </div>
-                          <div class="radio">
-                            <input id="radio3" type="radio" name="radio1" hidden="true"><label for="radio3">Рендер</label>
-                          </div>
-                          <div class="clearfix"></div>
+                        <div class="radio">
+                          <input id="radioq2" type="radio" name="radioq" hidden="true"><label for="radioq2">Ванная</label>
+                        </div>
+                        <div class="radio">
+                          <input id="radioq3" type="radio" name="radioq" hidden="true"><label for="radioq3">Прихожая</label>
+                        </div>
+                        <div class="radio">
+                          <input id="radioq4" type="radio" name="radioq" hidden="true"><label for="radioq4">Ландшафт</label>
                         </div>
                       </ul>
+                      <p>
+                        <span class="header">Стили:</span>Классический, Прованс, Хайтек
+                      </p>
+                      <div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email1" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email1">Эклектика</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email2" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email2">Скандинавский</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email3" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email3">Кантри</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email4" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email4">Современный</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email5" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email5">Классический</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email6" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email6">Хай-тек</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email7" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email7">Лофт</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="form-control" data-unstyled="true" id="user_show_email8" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email8">Восточный</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="radios">
+                        <div class="radio">
+                          <input id="radio1" type="radio" name="radio1" hidden="true" checked="true"><label for="radio1">Профессиональная</label>
+                        </div>
+                        <div class="radio">
+                          <input id="radio2" type="radio" name="radio1" hidden="true"><label for="radio2">Любительская</label>
+                        </div>
+                        <div class="radio">
+                          <input id="radio3" type="radio" name="radio1" hidden="true"><label for="radio3">Рендер</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
                     </div>
-                    <div class="settings-section">
-                      <div class="settings-title">
+                    <div class="moderate-photo_settings_section">
+                      <div class="moderate-photo_settings_title">
                         Размер комнаты:<span class="param">Не выбрана</span>
                       </div>
-                      <ul class="settings-list">
+                      <ul class="moderate-photo_settings_list">
                         <p>
                           <span class="header">Стили:</span>Классический, Прованс, Хайтек
                         </p>
@@ -270,11 +249,11 @@
                         </div>
                       </ul>
                     </div>
-                    <div class="settings-section">
-                      <div class="settings-title">
+                    <div class="moderate-photo_settings_section">
+                      <div class="moderate-photo_settings_title">
                         Материал пола:<span class="param">Не выбрана</span>
                       </div>
-                      <ul class="settings-list">
+                      <ul class="moderate-photo_settings_list">
                         <p>
                           <span class="header">Стили:</span>Классический, Прованс, Хайтек
                         </p>
@@ -322,35 +301,35 @@
                   </div>
                   <div class="clearfix"></div>
                   <div class="posr">
-                    <div class="submit">
+                    <div class="moderate-photo_submit">
                       <button id="no">Отклонить</button><button id="yes">Утвердить</button>
                     </div>
                   </div>
                 </div>
-                <div class="admin-events">
+                <div class="moderate-photo_events">
                   <a href="#">Удалить</a><a href="#">Отменить</a><a href="#">Сохранить</a>
                 </div>
               </div>
-              <div class="photo">
-                <div class="photo-inner">
-                  <div class="image">
+              <div class="moderate-photo">
+                <div class="moderate-photo_inner">
+                  <div class="moderate-photo_figure">
                     <img src="assets/images/Модерация-товара.jpg">
-                    <div class="comment">
+                    <div class="moderate-photo_comment">
                       <span class="header">Комментарий:</span>Отличная комната получилась, смотрите на www.spb.ru
                     </div>
                     <div class="checkbox">
                       <input name="user[show_email]" type="hidden" value="0"><input class="form-control" data-unstyled="true" id="user_show_email0" name="user[show_email]" type="checkbox" value="1"><label for="user_show_email0"></label>
                     </div>
                   </div>
-                  <div class="settings">
+                  <div class="moderate-photo_settings">
                     <div class="info">
                       <b>Склад:</b>Салфетки (<a href="#">сменить</a>)
                     </div>
-                    <div class="settings-section">
-                      <div class="settings-title opened">
+                    <div class="moderate-photo_settings_section">
+                      <div class="moderate-photo_settings_title opened">
                         Комната/Назначение:<span class="param">Не выбрана</span>
                       </div>
-                      <ul class="settings-list">
+                      <ul class="moderate-photo_settings_list">
                         <p class="title">
                           <span class="header">Стили:</span>Классический, Прованс, Хайтек
                         </p>
@@ -384,7 +363,7 @@
                         <p class="title mb10">
                           <span class="header">Гамма</span>
                         </p>
-                        <div class="colors">
+                        <div class="moderate-photo_settings_list_colors">
                           <div class="checkbox">
                             <input id="color1" type="checkbox" value="1"><label for="color1" style="background-color:white;"></label>
                           </div>
@@ -406,15 +385,145 @@
                   </div>
                   <div class="clearfix"></div>
                   <div class="posr">
-                    <div class="submit">
+                    <div class="moderate-photo_submit">
                       <button id="no">Отклонить</button><button id="yes">Утвердить</button>
                     </div>
                   </div>
                 </div>
-                <div class="admin-events">
+                <div class="moderate-photo_events">
                   <a href="#">Удалить</a><a href="#">Отменить</a><a href="#">Сохранить</a>
                 </div>
               </div>
+              <div class="paginator" id="paginator" data-role="paginator">
+                <div class="load-more" id="load-more">
+                  Загрузить еще
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="page-index">
+          <div class="page-index-aside">
+            <form class="filter filter-admin">
+              <div class="filter-section tags">
+                <div class="filter-title">
+                  Группы тэгов
+                </div>
+                <ul class="filter-list">
+                  <li class="locked">
+                    <a href="#">Комнаты</a><span class="nums">8</span><a class="filter-list_settings-icon" href="#"></a>
+                  </li>
+                  <li class="selected locked">
+                    <a href="#">По назначению</a><span class="nums">133 343</span><a class="filter-list_settings-icon" href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">Сюжет</a><span class="nums">137 443</span><a class="filter-list_settings-icon" href="#"></a>
+                  </li>
+                  <li class="filter-list_add">
+                    <a href="#">+ Добавить группу</a>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="page-index-content" id="index-content">
+            <h2 class="page-index-title">
+              ТЭГИ:<nobr>По назначению<span class="nums">10</span></nobr>
+            </h2>
+            <p class="gray regular">
+              Закрытая группа
+            </p>
+            <div class="search search-in-page" data-role="filter-search">
+              <input name="q" placeholder="Найти быстро...">
+              <div class="search-btn" data-role="submit"></div>
+            </div>
+            <div class="filter-inline">
+              <div class="filter-title filter-content-results">
+                Результатов:<span class="nums">10</span>
+              </div>
+              <div class="filter-title filter-content-toggler">
+                По времени
+              </div>
+              <div class="filter-title filter-content-pagination">
+                Показывать:<a href="#">25</a><a class="active" href="#">50</a><a href="#">100</a><a href="#">Все</a>
+              </div>
+            </div>
+            <div class="table">
+              <div class="table-row">
+                <div class="table-col50">
+                  <div class="table-head_tag">
+                    Тэг
+                  </div>
+                </div>
+                <div class="table-col50">
+                  URL (Slug)
+                </div>
+              </div>
+              <div class="table-row nocolor">
+                <div class="table-col50">
+                  <a class="tags-table_add-tag" href="#">Добавить тэг</a>
+                </div>
+                <div class="table-col50"></div>
+              </div>
+              <div class="table-row">
+                <div class="table-col50">
+                  <span class="tags-table_rownum">1</span>
+                  <div class="checkbox">
+                    <input id="tag1" type="checkbox" value="1"><label for="tag1"></label>
+                  </div>
+                  <span class="tags-table_tag">Терасса</span>
+                </div>
+                <div class="table-col50">
+                  <span class="tags-table_url">../terassa/..</span><a href="#">
+                    <div class="filter-list_settings-icon"></div>
+                  </a>
+                </div>
+              </div>
+              <div class="table-row">
+                <div class="table-col50">
+                  <span class="tags-table_rownum">2</span>
+                  <div class="checkbox">
+                    <input id="tag2" type="checkbox" value="1"><label for="tag2"></label>
+                  </div>
+                  <span class="tags-table_tag">Декор</span>
+                </div>
+                <div class="table-col50">
+                  <span class="tags-table_url">../decor/..</span>
+                </div>
+              </div>
+              <div class="table-row">
+                <div class="table-col50">
+                  <span class="tags-table_rownum">3</span>
+                  <div class="checkbox">
+                    <input id="tag3" type="checkbox" value="1"><label for="tag3"></label>
+                  </div>
+                  <span class="tags-table_tag">Терасса</span>
+                </div>
+                <div class="table-col50">
+                  <span class="tags-table_url">../terassa/..</span>
+                </div>
+              </div>
+              <div class="table-row">
+                <div class="table-col50">
+                  <span class="tags-table_rownum">4</span>
+                  <div class="checkbox">
+                    <input id="tag4" type="checkbox" value="1"><label for="tag4"></label>
+                  </div>
+                  <span class="tags-table_tag">Декор</span>
+                </div>
+                <div class="table-col50">
+                  <span class="tags-table_url">../decor/..</span>
+                </div>
+              </div>
+            </div>
+            <div class="paginator" id="paginator" data-role="paginator">
+              <div class="load-more" id="load-more">
+                Загрузить еще
+              </div>
+              <nav class="pagination">
+                <span class="pagination_item"><a class="pagination_link" href="#" rel="prev">1</a></span><span class="pagination_item current">2</span><span class="pagination_item"><a class="pagination_link" href="#" rel="prev">3</a></span><span class="pagination_item"><a class="pagination_link" href="#" rel="prev">4</a></span><span class="pagination_item"><a class="pagination_link" href="#" rel="prev">5</a></span>
+              </nav>
             </div>
           </div>
         </div>
