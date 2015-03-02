@@ -1,0 +1,141 @@
+//= require_self
+
+//@import "marvin";
+@import "variables";
+@import "theme";
+@import "fonts";
+@import "modules/mixins";
+@import "modules/grids";
+@import "modules/normalize";
+@import "modules/tune";
+@import "modules/helpers";
+
+/* SPRITE */
+$icon-layout: smart;
+$icon-spacing: 50px;
+@import "icon/*.png";
+
+//$icon2x-layout: smart;
+//$icon2x-spacing: 50px;
+//@import "icon2x/*.png";
+
+//@import "formstyler";
+//@import "select2";
+//@import "flexslider";
+//@import "toastr";
+//@import "jquery.isotope";
+//@import "jquery.ui.slider";
+
+/* COMPONENTS */
+@import "base/basic";
+@import "base/content-area";
+@import "base/sidemenu";
+//@import "base/btn";
+//@import "base/share";
+//@import "base/close";
+@import "base/logo";
+//@import "base/counter";
+@import "base/forms";
+//@import "base/avatar";
+@import "base/tooltip";
+//@import "base/nav";
+//@import "base/dropdown";
+@import "base/pagination";
+@import "base/load-more";
+//@import "base/preview";
+//@import "base/manage-links";
+//@import "base/comments";
+//@import "base/preloader";
+//@import "base/form-params";
+//@import "base/modal-fp";
+//@import "base/overlay";
+//@import "base/news";
+@import "base/layout";
+//@import "base/more-content";
+//@import "base/photobox";
+@import "base/page";
+@import "base/search";
+@import "base/table";
+//@import "base/modal";
+//@import "base/footer";
+//@import "base/card";
+//@import "base/share-btn";
+//
+//@import "widgets/teaser";
+//@import "widgets/gallery";
+//@import "widgets/comments";
+
+//@import "theme/teaser";
+//@import "theme/gallery";
+//
+///* True project entity */
+//@import "project/topnav";
+//@import "project/topbanner";
+@import "project/subnav";
+@import "project/userpanel";
+@import "project/moderate";
+//@import "project/article";
+//@import "project/admin-panel";
+//@import "project/admin-stat";
+@import "project/filter";
+//@import "project/tags";
+//@import "project/banners";
+//@import "project/collection";
+//@import "project/promo";
+//@import "project/preview-slider";
+//@import "project/photo";
+//@import "project/photos";
+//@import "project/photo-show";
+//@import "project/topics";
+//@import "project/product";
+//@import "project/products";
+//@import "project/products-stat";
+//@import "project/product-modal";
+//@import "project/product-show";
+//@import "project/product-edit";
+//@import "project/home";
+//@import "project/create-nav";
+//@import "project/login-system";
+//@import "project/user";
+//@import "project/users";
+//@import "project/error-404";
+//@import "project/useragreement";
+@import "project/search";
+//@import "project/notifications";
+//@import "project/posts";
+//@import "project/print";
+//@import "project/add-product";
+//@import "project/yml-setup";
+//@import "project/profile-products";
+
+section.container {
+  > h1:first-child {
+    margin-top: 25px;
+  }
+}
+
+.page{
+  position: relative;
+  padding-bottom: 300px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.container, .page-index, .topics-index, .product-show-content, .product-show-top-inner, .home-index, .user-settings-title, .user-info, .user-reports, .user-posts, .user-collections, .user-notifications, .p-search, .notifications{
+  position: relative;
+  padding: 0 25px;
+  margin: 0 auto;
+  width: 997px;
+}
+.container:after, .page-index:after, .topics-index:after, .product-show-content:after, .product-show-top-inner:after, .home-index:after, .user-settings-title:after, .user-info:after, .user-reports:after, .user-posts:after, .user-collections:after, .user-notifications:after, .p-search:after, .notifications:after{
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.gray{
+  color: gray;
+}

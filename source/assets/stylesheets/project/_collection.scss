@@ -1,0 +1,81 @@
+.collection {
+  @extend .clearfix;
+  position: relative;
+  display: inline-block;
+  width: getWidthCol(3);
+  vertical-align: bottom;
+  margin-bottom: 25px;
+  transition: opacity 0.2s;
+
+  &.is-loading {
+    opacity: 0;
+  }
+}
+
+.collection-pic {
+  width: getWidthCol(3);
+  overflow: hidden;
+  height: 65px;
+  background: $main-bg;
+}
+
+.collection-title,
+.collection-add-btn {
+  & + .collection-pic {
+    margin-bottom: 10px;
+    height: getWidthCol(3);
+  }
+}
+
+.collection-add-btn {
+  @include p(a,82px,0,'',0);
+  font: 15px/normal $text-functional;
+  color: rgb(215,215,215);
+  text-align: center;
+
+  &:before {
+    @include icon(plus-collection, b);
+    margin: 0 auto 20px;
+  }
+}
+
+.collection-title {
+  @include fade-out-gradient(rgba(255,255,255,0), rgba(255,255,255,1), 30px, 100%);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgb(48,48,48);
+}
+
+.collection-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: inline-block;
+  color: rgb(215,215,215);
+  margin-left: 4px;
+}
+
+.collection-add {
+  margin-top: 35px;
+}
+
+.collection-pic + .collection-pic {
+  float: left;
+  width: 30%;
+}
+
+.collection-pic + .collection-pic + .collection-pic {
+  margin-left: 5%;
+}
+
+.collections {
+  .collection {
+    margin-right: 22px;
+  }
+
+  .collection:nth-child(4n) {
+    margin-right: 0;
+  }
+}

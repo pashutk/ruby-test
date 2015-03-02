@@ -1,0 +1,41 @@
+.paginator {
+  margin-top: 50px;
+}
+
+.pagination {
+  font: bold 17px/normal $text-functional;
+  text-align: center;
+}
+
+.pagination_item {
+  display: inline-block;
+  color: rgb(63,63,63);
+  vertical-align: top;
+  min-width: 40px;
+
+  &.current {
+    color: rgb(157,157,157);
+  }
+}
+
+.pagination_gap,
+.pagination_item.current {
+  border: 2px solid transparent;
+  min-width: 40px;
+}
+
+.pagination_link {
+  display: block;
+  padding: 0 5px;
+  margin: 0 7.5px;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 13px;
+  border: 2px solid transparent;
+  transition: all $speed-fast ease-in-out;
+
+  &:hover {
+    color: $brand-bg;
+    border-color: $brand-bg;
+  }
+}

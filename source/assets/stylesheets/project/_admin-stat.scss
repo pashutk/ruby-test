@@ -1,0 +1,56 @@
+.admin-stat_counter {
+  font-size: 10px;
+  font-family: Tahoma;
+
+  b {
+    display: block;
+    margin-bottom: 2px;
+    color: rgb(127,127,127);
+  }
+}
+
+.admin-stat_title {
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.admin-stat__bar {
+  overflow: hidden;
+  margin-top: 3px;
+
+  .admin-stat_counter {
+    float: left;
+    min-width: getWidthCol(1);
+    color: rgb(85,85,85);
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.admin-stat__panel {
+  margin-left: -10px;
+  width: 158px;
+  margin-bottom: 13px;
+  text-align: left;
+  padding: 12px;
+  background: $main-bg;
+
+  .admin-stat_counter {
+    float: left;
+    width: 33.3333333%;
+  }
+
+  .clearfix {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

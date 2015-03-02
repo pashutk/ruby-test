@@ -1,0 +1,18 @@
+.topbanner {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 25px 0;
+  background: #fff image-url('inmyroom/topbanner-bg.jpg');
+}
+
+.topbanner-content {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+
+  img, object, iframe {
+    display: block;
+    width: 947px;
+  }
+}

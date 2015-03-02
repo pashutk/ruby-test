@@ -1,0 +1,119 @@
+.userpanel {
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+
+  .nav:first-child {
+    margin-top: -3px;
+    margin-bottom: 22px;
+
+    li {
+      a {
+        height: 24px;
+      }
+    }
+  }
+
+  .nav + .nav {
+    margin-bottom: 10px;
+  }
+}
+
+.userpanel_hamburger {
+  @include hamburger(rgb(68,68,68), 18px, 2px, 3px);
+  display: inline-block;
+  margin: 3px 0 0 13px;
+  vertical-align: top;
+}
+
+.userpanel-notification-counter {
+  position: relative;
+  top: -8px;
+  display: inline-block;
+  margin-right: 5px;
+  padding-top: 6px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid $brand-color;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  background: #fff;
+  color: $brand-color;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: top;
+  text-align: center;
+  text-indent: -1px;
+}
+
+.userpanel-user {
+  padding: 17px 0 15px;
+}
+
+.userpanel-login {
+  position: relative;
+  display: block;
+  margin-top: 9px;
+  padding: 8px 9px;
+  height: 31px;
+  border: 1px solid rgb(212,212,212);
+  background: #fff;
+  border-radius: 2px;
+  color: rgb(173,18,0);
+  text-align: center;
+  font-size: 12px;
+  vertical-align: top;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+
+  &:before {
+    @include pseudo();
+    @include icon(user-login-in);
+    vertical-align: top;
+    margin-right: 6px;
+    margin-top: -3px;
+  }
+
+  &:hover {
+    background: rgb(173,18,0);
+    color: #fff;
+    border-color: rgb(173,18,0);
+
+    &:before {
+      @include icon(user-login-in-hover);
+    }
+  }
+}
+
+.userpanel-bar {
+  @include p(a,'',0,0,0);
+//  @include legacy-pie-clearfix;
+  padding: 6px 10px 5px 10px;
+  background: $main-bg;
+
+  a {
+    float: left;
+    color: rgb(141,141,141);
+    font: 11px/normal $text-functional;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  a + a {
+    float: right;
+  }
+}
+
+.userpanel-settings {
+  &:before {
+    position: relative;
+    top: -1px;
+    @include pseudo;
+    @include icon(userpanel-settings);
+
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+}

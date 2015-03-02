@@ -1,0 +1,187 @@
+$teaser-offset: 25px;
+
+.teaser-with-announce-small {
+  .teaser-content {
+    padding: 13px 25px;
+  }
+}
+
+.teaser-banner {
+  @include p(a,$teaser-offset,$teaser-offset,'','');
+  width: 300px;
+}
+
+.teaser-date {
+  display: none;
+}
+
+.teaser-author {
+  display: none;
+
+  @include p(a,'',0,65px, 0);
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 13px;
+  font-family: $text-main-family;
+
+  > b {
+    margin-right: 4px;
+    font-family: $text-main-family;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.teaser-categories {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-family: $text-main-family;
+
+  a {
+    color: inherit;
+  }
+
+  a + a:before {
+    @include pseudo(',');
+    margin-right: 4px;
+  }
+}
+
+.teaser-likes {
+  margin-top: 22px;
+}
+
+.teaser-title {
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0,0,0,0);
+  font-weight: 700;
+  font-size: 55px;
+  font-family: $text-main-family;
+}
+
+.teaser-category {
+  font: 15px/normal $text-accident-family;
+  color: rgb(255,255,255);
+}
+
+.teaser-hr {
+  margin-top: 12px;
+  height: 4px;
+  width: 175px;
+  background: #fff;
+}
+
+.teaser-announce {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 1.3;
+  font-family: $text-main-family;
+}
+
+.teaser-hr + .teaser-announce {
+  margin-top: 12px;
+}
+
+.teaser .allign {
+  padding: $teaser-offset;
+}
+
+/* Modificators */
+.teaser-with-banner {
+  .teaser-content-wrap {
+    position: relative;
+    margin-right: 325px;
+  }
+}
+
+.teaser-type-standart {
+  .teaser-main {
+    box-sizing: content-box;
+    padding: $teaser-offset 0 0;
+    min-height: 350px;
+    background-image: none !important;
+  }
+
+  &.teaser-has-fill {
+    padding-bottom: $teaser-offset;
+  }
+
+  .teaser-load {
+    left: $teaser-offset * 2;
+  }
+
+  .teaser-fill {
+    background-color: transparent;
+  }
+
+  .teaser-container {
+    background-image: none !important;
+  }
+
+  .teaser-banner {
+    top: 0;
+    right: 0;
+  }
+
+  .teaser-content-wrap {
+    margin-right: 350px;
+  }
+}
+
+
+/* Teaser has bg color, need for adding top spacing */
+.teaser-type-hd {
+  .teaser-main {
+    box-sizing: content-box;
+    background-image: none !important;
+    padding-top: $teaser-offset;
+    min-height: 500px;
+  }
+
+  .teaser-fill {
+    bottom: 75px;
+  }
+
+  .teaser-content-wrap {
+    background-image: none !important;
+  }
+}
+
+.teaser-type-super-hd {
+  .teaser-main {
+    background-position: center top;
+    background-size: cover;
+    background-color: #fff;
+  }
+
+  .teaser-fill {
+    display: none;
+  }
+
+  .teaser-container {
+    background-image: none !important;
+  }
+
+  .teaser-content-wrap {
+    background-image: none !important;
+  }
+}
+
+.teaser-type-hd,
+.teaser-type-super-hd {
+  .teaser-content {
+    width: 670px;
+  }
+}
+
+.teaser-with-banner.teaser-type-hd,
+.teaser-with-banner.teaser-type-super-hd {
+  .teaser-content {
+    width: 545px;
+  }
+}

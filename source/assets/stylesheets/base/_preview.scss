@@ -1,0 +1,219 @@
+/*
+
+Name: .preview
+
+Markup:
+  .preview
+    -pic
+    -body
+
+Modifers:
+  -size-xs
+  -size-s
+  -size-l
+  -size-l
+  -size-xl
+  -draft
+*/
+
+.preview {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  transition: opacity $speed-fast;
+  opacity: 1;
+}
+
+.preview-title {
+  display: block;
+  color: $title-color;
+  font-weight: 600;
+  transition: color $speed-fast;
+
+  .preview:not(.preview-size-xl):hover & {
+    color: $brand-color;
+  }
+
+  a, a:hover {
+    color: inherit;
+  }
+}
+
+.preview-pic {
+  position: relative;
+  overflow: hidden;
+  background-color: $main-bg;
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .preview & a:before {
+    @include p(a,0,0,0,0);
+    @include pseudo;
+    z-index: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.27));
+    transition: opacity $speed-fast ease-in-out;
+    opacity: 0;
+  }
+
+  .preview:hover & a:before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.27));
+    opacity: 1;
+  }
+}
+
+.preview-pic + .preview-title {
+  margin-top: 12px;
+}
+
+.preview-body {
+  margin-top: 7px;
+  color: rgb(141,141,161);
+  font-size: 13px;
+  font-family: $text-main-family;
+  font-weight: 200;
+}
+
+.preview-size-xs {
+  width: getWidthCol(2);
+
+  .preview-pic {
+    height: 125px;
+  }
+
+  .preview-title {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+
+.preview-size-s {
+  width: getWidthCol(3);
+
+  .preview-pic {
+    height: 197px;
+  }
+
+  .preview-title {
+    font-size: 16px;
+  }
+
+  .preview-pic + .preview-title {
+    margin-top: 0.6em;
+  }
+
+  .preview-title + .preview-body {
+    margin-top: 0.4em;
+  }
+}
+
+.preview-size-m {
+  width: getWidthCol(4);
+
+  .preview-pic {
+    height: 200px;
+  }
+
+  .preview-pic + .preview-title {
+    font-size: 20px;
+    margin-top: 0.6em;
+  }
+
+  .preview-title + .preview-body {
+    margin-top: 0.5em;
+  }
+}
+
+.preview-size-l {
+  width: getWidthCol(6);
+
+  .preview-pic {
+    height: 307px;
+  }
+
+  .preview-title {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .preview-pic + .preview-title {
+    margin-top: 0.50em;
+  }
+}
+
+.preview-size-xl {
+  position: relative;
+  width: getWidthCol(8);
+  height: 533px;
+
+  .preview-pic {
+    height: 533px;
+  }
+
+  .preview-title {
+    position: relative;
+    left: -2px;
+    display: block;
+    font-size: 38px;
+    line-height: 0.98;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .preview-category {
+    margin-bottom: 9px;
+    color: #fff;
+    font-size: 13px;
+  }
+
+  .preview-title-fill {
+    @include p(a,0,0,0,0);
+    display: block;
+  }
+
+  .preview-title-text {
+    position: relative;
+    display: block;
+  }
+
+  .preview-category,
+  .preview-title-text {
+    color: #fff !important;
+  }
+
+  .allign {
+    padding: 25px;
+  }
+
+  .preview-pic a:after {
+    @include p(a,0,0,0,0);
+    @include pseudo;
+    z-index: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  }
+}
+
+.preview-draft {
+  position: relative;
+
+  &:after {
+    @include p(a,5px,'','',5px);
+    @include pseudo("Черновик");
+    border-radius: 3px;
+    padding: 2px;
+    background: $brand-bg;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}

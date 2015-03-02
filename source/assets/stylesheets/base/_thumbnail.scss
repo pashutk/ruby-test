@@ -1,0 +1,29 @@
+/*
+ * Name: thumbnail
+ *
+ * Elements:
+ *
+ * Modifers:
+ * 
+ * Markup: a.thumbnail>(img+div.thumbnai_caption)
+ *
+ */
+
+
+/* Component
+ ========================================================================== */
+ 
+.thumbnail {
+	display: block;
+}
+				
+.thumbnail > img {
+	display: block;
+}
+
+.thumbnail_caption {
+	display: block;
+}
+
+/* Modifers
+ ========================================================================== */

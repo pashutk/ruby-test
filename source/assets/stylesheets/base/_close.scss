@@ -1,0 +1,42 @@
+.close {
+  display: block;
+  cursor: pointer;
+}
+
+.close-main {
+  @include icon(close-gray);
+
+  &:hover,
+  &:active {
+    @include icon(close-brand);
+  }
+}
+
+.close-red {
+  @include icon(close-red);
+}
+
+.close-gray {
+  @include icon(close-gray);
+}
+
+.close-white {
+  @include icon(close-white);
+}
+
+.close-box {
+  padding: 9px 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background: rgba(63,63,63,0.7);
+  cursor: pointer;
+
+  &:after {
+    @include icon(photobox-close);
+  }
+
+  &:hover {
+    background: rgba(63,63,63,0.9);
+  }
+}

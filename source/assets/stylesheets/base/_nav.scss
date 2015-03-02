@@ -1,0 +1,29 @@
+//
+// Navs
+// --------------------------------------------------
+
+.nav {
+  @include clearfix();
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  font: 12px/1.2 $nav-font-family;
+  text-transform: uppercase;
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      color: rgb(128,128,128);
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+%manage-links {
+  font-size: 11px;
+  text-align: right;
+
+  a {
+    margin-left: 5px;
+    color: rgb(170,170,170);
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(63,63,63);
+    }
+  }
+}
+
+.manage-links-wrap {
+  position: relative;
+}
+
+.manage-links-wrap-extend {
+  padding-bottom: 25px;
+}
+
+.manage-links {
+  @extend %manage-links;
+  @include p(a,'',0,-18px,0);
+  display: none;
+  padding-top: 10px;
+
+
+  .preview:hover &, .collection:hover &, .manage-links-wrap:hover & {
+    display: block;
+  }
+}

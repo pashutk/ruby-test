@@ -1,0 +1,45 @@
+body {
+  color: $text-color;
+  font: 400 14px/normal $text-main-family;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: color $speed-fast
+}
+
+h1 {
+  margin: 0 0 15px;
+}
+
+h2 {
+  @extend %title-section;
+}
+
+h3 {
+  margin: 15px 0;
+  color: $title-color;
+  font: bold 20px/normal $text-main-family;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 17px 0;
+}
+
+select {
+  visibility: hidden;
+}
+
+.link {
+  color: rgb(0,111,195);
+  font: 16px/normal $text-main-family;
+}
+
+.link-primary {
+  color: $link-default;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,58 @@
+.modal-fp {
+  @include p('f',0,0,0,0);
+  z-index: 100;
+  overflow-y: auto;
+  visibility: hidden;
+  background: #fff;
+}
+
+.modal-fp.modal-page {
+  position: relative;
+}
+
+.modal-fp-dialog {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.modal-fp.modal-open {
+  visibility: visible;
+  opacity: 1;
+
+  .modal-fp-dialog {
+    opacity: 1;
+  }
+}
+
+.modal-fp-content {
+  position: relative;
+  z-index: 2;
+}
+
+.modal-fp-close {
+  @extend .close;
+  @extend .close-main;
+  @extend .tooltip-pseudo;
+  @include p(a,17px,25px);
+  z-index: 5;
+  display: none;
+}
+
+.modal-fp .jcrop-holder {
+  margin: auto;
+  max-width: 100%;
+}
+
+.modal-fp-footer {
+  @include p(f,'', 15px, 15px);
+  z-index: 5;
+}
+
+.modal-fp .full-height-center > div > img {
+  text-align: center;
+  opacity: 0;
+}
+
+.modal-fp .full-height-center > div > img.loaded {
+  opacity: 1;
+}

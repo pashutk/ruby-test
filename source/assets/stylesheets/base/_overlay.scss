@@ -1,0 +1,26 @@
+.overlay {
+  @include p(f,f);
+  height: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(all 0.2s ease-out);
+}
+
+.overlay-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlayed-article-settings {
+  .article-settings {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+#topnav-overlay {
+  z-index: 3;
+}

@@ -1,0 +1,120 @@
+.product-tabs {
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #000;
+
+  a {
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+
+    &.is-active,
+    &:hover {
+      border-bottom: 1px solid;
+      color: rgb(172, 52, 54);
+    }
+
+    & + a {
+      margin-left: 18px;
+    }
+  }
+}
+
+.product-edit, .product-fast-edit {
+  .product-show-content {
+    padding-top: 25px;
+  }
+
+  .product-show-title {
+    margin-bottom: 7px;
+  }
+}
+
+.product-edit_label {
+  display: block;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-edit_label_required {
+  display: inline-block;
+  color: rgb(150, 60, 47);
+  text-transform: none;
+}
+
+.form-group-sizes {
+  .form-control {
+    display: inline-block;
+    width: 62px;
+  }
+}
+
+.form-group-inline {
+  display: inline-block;
+  margin: 0 9px 0 6px;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.form-group-prices {
+  .form-group {
+    vertical-align: bottom;
+  }
+
+  .form-control {
+    display: inline-block;
+    width: 72px;
+  }
+}
+
+.modal {
+ textarea.product-edit_textarea {
+    height: 120px;
+  }
+}
+
+.product-edit_input-weight {
+  display: inline-block;
+  margin-top: 3px;
+  width: 90px;
+}
+
+
+.checkboxes {
+  margin-bottom: 30px;
+}
+
+.checkboxes_label {
+  margin-bottom: 10px;
+}
+
+.checkboxes_col {
+  display: inline-block;
+  vertical-align: top;
+
+  & + .checkboxes_col {
+    margin-left: 20px;
+  }
+}
+
+
+.product-edit_form-row {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.product-edit_category {
+
+}
+
+.product-edit_category_label {
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.product-edit_field {
+  margin-bottom: 25px;
+}
+

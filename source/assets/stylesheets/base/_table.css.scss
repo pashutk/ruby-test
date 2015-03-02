@@ -1,0 +1,109 @@
+.table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 13px;
+}
+
+.table-col50{
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  float: left;
+  padding-left: 10px;
+  position: relative;
+}
+.table .filter-list_settings-icon{
+  opacity: 1;
+  margin-right: 5px;
+}
+.table-row.nocolor{
+  background-color: transparent !important;
+}
+.table .table-col50 {
+  .tags-table_rownum, .checkbox, .tags-table_tag {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .tags-table_rownum{
+    color: gray;
+    width: 35px;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .checkbox{
+    position: relative;
+    top: 3px;
+  }
+  .tags-table_tag{
+
+  }
+}
+.tags-table_add-tag{
+  background-color: #3f3f3f;
+  color:white;
+  border-radius: 3px;
+  padding: 4px 25px;
+}
+.table-row:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.table-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
+}
+
+th.table-cell {
+  font-weight: 600;
+}
+
+.table-cell {
+  height: 40px;
+}
+
+//Products table
+.products_stats-table {
+  width: calc(100% - 218px - 23px);
+  margin-bottom: 35px;
+
+  th > a {
+    font-weight: 600;
+  }
+
+  .total-row {
+    background-color: #ffbab8;
+    font-weight: 600;
+
+    .table-cell:nth-of-type(1) {
+      text-align: right;
+    }
+  }
+
+  .table-cell {
+
+    &:nth-of-type(1) {
+      text-align: left;
+      width: 234px;
+      padding-right: 43px;
+      padding-left: 8px;
+    }
+
+    &:not(:nth-of-type(1)) {
+      text-align: center;
+    }
+  }
+
+  th:nth-of-type(1) {
+    padding-left: 43px;
+  }
+}

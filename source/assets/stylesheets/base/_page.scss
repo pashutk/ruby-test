@@ -1,0 +1,97 @@
+.page-index {
+  @extend .container;
+  padding-top: 25px;
+}
+
+.page-index-title {
+  @extend %title-section;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.page-index-tags {
+  margin: 15px 0 10px;
+}
+
+.products-index + .photo-feed {
+  margin-top: 23px;
+}
+
+.products-index {
+  .page-index-description {
+    margin-bottom: 15px;
+  }
+
+  .page-index-tags {
+    margin: 13px 0 17px;
+  }
+}
+
+.page-index-description {
+  font-size: 13px;
+  color: rgb(127,127,127);
+  margin-top: 8px;
+  margin-bottom: 23px;
+
+  .read-more {
+    display: inline-block;
+    margin-left: 4px;
+    text-decoration: underline;
+  }
+}
+
+.page-index-aside {
+  position: relative;
+  float: left;
+  width: getWidthCol(3);
+}
+
+.page-index-content {
+  position: relative;
+  float: right;
+  width: getWidthCol(9);
+}
+
+.read-more {
+  cursor: pointer;
+}
+
+.post-list-title {
+  overflow: hidden;
+  height: 85px;
+  margin-top: 16px;
+  color: $title-color;
+  font-size: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /*
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  &.is-processed {
+    height: auto;
+    opacity: 1;
+  }
+  */
+}
+
+.post-list-title + .page-index-description {
+  margin-bottom: 28px;
+  max-width: getWidthCol(8);
+}
+
+.post-list-tags {
+  margin-bottom: 15px;
+
+  .tags + .tags {
+    margin-top: 4px;
+  }
+}
+
+.post-list .row {
+  margin-bottom: 40px;
+}
+
+.post-list__promo {
+  padding-top: 25px;
+}

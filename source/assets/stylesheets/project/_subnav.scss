@@ -1,0 +1,232 @@
+.subnav {
+  z-index: 3;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.subnav-overlay {
+}
+
+.subnav_inner {
+  position: relative;
+  z-index: 3;
+  background: $main-bg;
+  color: rgb(49,49,49);
+  font-size: 15px;
+}
+
+.subnav_brand {
+  position: absolute;
+  top: -100%;
+  display: block;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.main-nav {
+  float: left;
+  transition: margin 0.4s;
+
+  > li {
+    position: relative;
+    float: left;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+
+  > li > a {
+    position: relative;
+    display: block;
+    padding: 16px 0 15px;
+    cursor: pointer;
+    color: rgb(99,99,99);
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: $brand-color;
+      content: '';
+      transition: all 0.15s;
+      opacity: 0;
+      transform: translateY(5px);
+    }
+
+  }
+
+  > li.current {
+    a {
+      color: #000;
+    }
+  }
+
+  > li:hover a,
+  > .is-active > a {
+    color: #000;
+
+    &:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.subnav_drop {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  max-height: 0;
+  background: #fff;
+  transition: max-height 0.2s;
+
+  &.is-open {
+    max-height: 700px;
+  }
+
+  .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@mixin tag-decor($i, $name) {
+  li.tag__#{$i} {
+    a {
+      &:before {
+        @include icon($name);
+      }
+
+      &:hover:before {
+        @include icon($name + -brand);
+      }
+    }
+  }
+}
+
+.tag-nav {
+  overflow: hidden;
+
+  li {
+    float: left;
+
+    &:not(:first-child) {
+      margin-left: 3px;
+    }
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: 77px 0 0;
+    width: 132px;
+    height: 110px;
+    border: 1px dashed transparent;
+    text-align: center;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-image: image-url('dashed-border.png') 1;
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 53px;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  @include tag-decor(kitchen, tag-kitchen);
+  @include tag-decor(bath, tag-bath);
+  @include tag-decor(door, tag-door);
+  @include tag-decor(child, tag-child);
+  @include tag-decor(bed, tag-bed);
+  @include tag-decor(chair, tag-chair);
+  @include tag-decor(sofa, tag-sofa);
+  @include tag-decor(clothes, tag-clothes-rack);
+  @include tag-decor(balcony, tag-balcony);
+}
+
+.subnav {
+  &.is-fixed {
+    .subnav_brand {
+      top: 8px;
+      opacity: 1;
+    }
+
+    .main-nav {
+      margin-left: 58px;
+    }
+  }
+
+  .tag-nav {
+    margin-bottom: 27px;
+  }
+}
+
+.subnav_btn-go-more {
+  display: block;
+  margin: 30px auto 0;
+  text-align: center;
+  padding-top: 9px;
+  max-width: 626px;
+  border: 1px solid rgb(231,231,231);
+  height: 42px;
+  font-size: 18px;
+  font-weight: 600;
+
+  &:after {
+    @include simple-arrow(13px,1px,$brand-bg);
+    position: relative;
+    top: 5px;
+    margin: 0 0 0 10px;
+    transition: all $speed-fast;
+  }
+
+  &:hover {
+    background: $brand-bg;
+    color: #fff;
+    border-color: $brand-bg;
+
+    &:after {
+      border-color: #fff;
+    }
+  }
+}
+
+.tags-block_title {
+  display: block;
+  margin: 0 0 5px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid rgb(233,233,233);
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tags-block_item {
+  position: relative;
+  display: inline-block;
+  color: rgb(87,87,87);
+  line-height: 1.6;
+
+  &:hover {
+    color: $brand-bg;
+  }
+}
+
+.tags-block_item:not(:last-child) {
+  margin-right: 20px;
+
+  &:after {
+    position: absolute;
+    right: -12px;
+    content: '-';
+  }
+}

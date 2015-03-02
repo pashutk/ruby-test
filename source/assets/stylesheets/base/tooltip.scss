@@ -1,0 +1,80 @@
+.tooltip {
+  display: inline-block;
+  background: rgb(63, 63, 63);
+  color: #fff;
+
+  li:before {
+    content: "-";
+    margin-right: 1px;
+  }
+}
+
+.tooltip-mini {
+  @include p(a,100%,4px);
+  display: none;
+  box-sizing: border-box;
+  margin-top: 7px;
+  padding: 4px 7px;
+  min-width: 100px;
+  height: 20px;
+  font-size: 11px;
+  white-space: nowrap;
+
+  &:after {
+    @include p(a,-12px,6px);
+    @include pseudo();
+    @include triangle(b, rgb(63, 63, 63), 5px);
+    border-width: 6px 5px;
+  }
+
+  .gallery-btn-fullsize & {
+    box-sizing: border-box;
+  }
+
+  .gallery-btn-fullsize:hover & {
+    display: block;
+  }
+}
+
+.tooltip-pseudo {
+  &:before {
+    @include p(a,100%,0px);
+    display: none;
+    box-sizing: border-box;
+    margin-top: 7px;
+    padding: 4px 7px;
+    height: 20px;
+    color: #fff;
+    background: rgb(63, 63, 63);
+    font-size: 11px;
+    white-space: nowrap;
+    content: "Нажмите Esc для закрытия";
+    text-align: center;
+  }
+
+  &:after {
+    @include p(a,'',2px,-7px);
+    @include pseudo();
+    display: none;
+    @include triangle(b, rgb(63, 63, 63), 5px);
+    border-width: 6px 5px;
+  }
+
+  &:hover {
+    &:after, &:before {
+      display: block;
+    }
+  }
+}
+
+.tooltip-maxi {
+  padding: 15px 13px 10px;
+  max-width: 187px;
+  font-size: 11px;
+
+  &:after {
+    @include p(a,12px,"","",-10px);
+    @include pseudo();
+    @include triangle(r, rgb(63, 63, 63), 5px);
+  }
+}

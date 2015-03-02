@@ -1,0 +1,14 @@
+.promo-link-back{
+  margin-top: 25px;
+  display: block;
+  color: #555;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.promo-link-back:before{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6px;
+  @include icon(preview-slider-prev);
+}

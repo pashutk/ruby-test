@@ -1,0 +1,10 @@
+.photos {
+}
+
+.photos__grid-3 {
+  @include tile-grid('.photo', 3, 25px, 30px);
+}
+
+.photos__grid-4 {
+  @include tile-grid('.photo', 4, 25px, 30px);
+}

@@ -1,0 +1,26 @@
+@import "libraries";
+
+@import "modules/animation";
+@import "modules/normalize";
+@import "modules/tune";
+@import "modules/grids";
+@import "modules/helpers";
+@import "modules/transitions";
+
+/* SPRITE */
+$icon-layout: smart;
+@import "icon/*.png";
+
+@import "editor/jcrop";
+
+#ui-datepicker-div {
+  z-index: 1000 !important;
+  background: #fff;
+}
+
+.full-editor .plugin .plugin-content .text-area > div,
+.full-editor .plugin .plugin-content .text-area .nicEdit-main { width: 100% !important; }
+
+.nicEdit-pane select {
+  visibility: visible;
+}

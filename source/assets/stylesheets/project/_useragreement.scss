@@ -1,0 +1,11 @@
+.useragreement {
+  ul {
+    list-style: decimal;
+    padding-left: 25px;
+
+    ul {
+      list-style: disc;
+      padding-left: 25px;
+    }
+  }
+}

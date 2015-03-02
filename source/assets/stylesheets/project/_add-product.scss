@@ -1,0 +1,281 @@
+.add-product {
+  margin-top: 20px;
+}
+
+.add-product-hint {
+  span {
+    color: rgb(153, 0, 0);
+  }
+}
+
+.add-product-header {
+  font-size: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.add-product-step-description {
+  margin: 7px 0 20px 1px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.add-product-step-value, .add-product-step-text {
+  display: inline-block;
+}
+
+.add-product-step-value {
+  color: $brand-color;
+}
+
+.add-product-step-text {
+  text-transform: uppercase;
+}
+
+$product-setup-form-control-color: rgb(188, 188, 188);
+
+.add-product-form {
+  width: 623px;
+
+  .form-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  .form-group--submit {
+    text-align: right;
+  }
+
+  .form-control {
+    border-radius: 2px;
+  }
+
+  input.form-control,
+  textarea.form-control {
+    font-size: 15px;
+    @include placeholder($product-setup-form-control-color);
+  }
+
+  input.form-control {
+    padding: 4px 9px 4px;
+    height: 40px;
+  }
+
+  textarea.form-control {
+    padding: 12px;
+    height: 80px;
+  }
+
+  .symbol-counter {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 11px;
+    color: $product-setup-form-control-color;
+  }
+}
+
+.form-group--submit {
+  @extend .form-group;
+}
+
+.add-product-form-submit {
+  @extend .btn;
+  @extend .btn-primary;
+  padding: 2px 36px;
+  font-size: 17px;
+  height: 29px;
+}
+
+.checkbox-list-container {
+  margin-left: 4px;
+}
+
+.checkbox-list {
+  padding-left: 25px;
+
+  .form-group {
+    margin-bottom: 7px;
+    margin-top: 8px;
+  }
+}
+
+.checkbox-list-item {
+  position: relative;
+
+  .checkbox-list {
+    display: none;
+  }
+
+  &.is-opened {
+
+    & > .checkbox-list-item-more::before {
+      position: relative;
+      left: -2px;
+      top: -1px;
+      content: '-';
+    }
+
+    & > .checkbox-list {
+      display: block;
+    }
+  }
+}
+
+.checkbox-list-item-more {
+  position: absolute;
+  right: calc(100% + 13px);
+  top: -2px;
+  font-size: 20px;
+  color: $brand-color;
+
+  &::before {
+    content: '+';
+  }
+}
+
+.add-product-rates {
+  @include tile-grid('.add-product-rate', 4, 25px, 25px);
+  width: 880px;
+  margin: 37px auto;
+}
+
+.add-product-rate {
+  display: inline-block;
+  width: 201px;
+  vertical-align: top;
+  text-align: center;
+  padding: 16px 0;
+
+  label {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 35px;
+    width: 160px;
+    line-height: 35px;
+    text-align: center;
+    background-color: rgb(171,20,0);
+    background-image: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+
+    &::before {
+      content: 'Активировать';
+    }
+  }
+}
+
+.add-product-rate--start {
+  @extend .add-product-rate;
+  background-color: $main-bg;
+}
+
+.add-product-rate--standart {
+  @extend .add-product-rate;
+  background-color: rgb(225, 249, 221);
+}
+
+.add-product-rate--pro {
+  @extend .add-product-rate;
+  background-color: rgb(225, 233, 233);
+}
+
+.add-product-rate--vip {
+  @extend .add-product-rate;
+  background-color: rgb(255, 238, 211);
+}
+
+.add-product-rate-name {
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: rgb(51, 37, 35);
+}
+
+.add-product-rate-currency {
+  margin-bottom: 23px;
+  height: 32px;
+  line-height: 32px;
+  background-color: rgb(51, 37, 35);
+  color: #fff;
+  font-size: 14px;
+}
+
+.add-product-rate-options {
+  margin-bottom: 17px;
+  padding: 0 16px;
+  text-align: left;
+
+  li {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+}
+
+.add-product-hint--rates {
+  @extend .add-product-hint;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.add-product-hint-methods {
+  @extend .add-product-hint;
+  margin-bottom: 19px;
+  font-size: 15px;
+  margin-top: 30px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.add-product-methods {
+  .jq-radio {
+    display: none;
+  }
+}
+
+.add-product-method {
+  margin-right: 25px;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 3px;
+  width: 460px;
+  height: 270px;
+  text-align: center;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+    content: '';
+  }
+}
+
+.add-product-method-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 241px;
+  text-align: center;
+}
+
+.add-product-method-name {
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: rgb(153, 0, 0);
+  font-weight: 700;
+}
+
+.add-product-method-text {
+  font-size: 19px;
+}
+
+

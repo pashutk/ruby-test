@@ -1,0 +1,119 @@
+/*
+ * Name: navbar
+ *
+ * Elements:
+ *
+ * Modifers: justify
+ *
+ * Markup:
+ *
+ */
+
+
+/* Component
+ ========================================================================== */
+.navbar {
+  background: #fff;
+  font-size: 13px;
+}
+
+.navbar-nav {
+  font-size: 13px;
+
+  > li {
+    position: relative;
+    float: left;
+    margin-right: 2px; // space for double border
+
+    > a {
+      position: relative;
+      display: block;
+      padding: 12px 20px 14px;
+      color: rgb(106,106,106);
+      text-transform: none;
+    }
+
+    // right double border
+    &:after {
+      @include p(a,0,-2px,0,'');
+      @include pseudo();
+      width: 2px;
+      border-right: 1px solid rgb(255,251,255);
+      background: rgb(208,208,205);
+    }
+  }
+
+  li:first-child {
+    margin-left: 2px; // space for double border
+
+    // left double border
+    &:before {
+      @include p(a,0,'',0,-2px);
+      @include pseudo();
+      width: 2px;
+      border-left: 1px solid rgb(255,251,255);
+      background: rgb(208,208,205);
+    }
+  }
+}
+
+.navbar-nav-select {
+  margin-top: 5px;
+}
+
+.navbar-checkbox {
+  label {
+    margin-top: 12px;
+  }
+}
+
+.navbar-left {
+  float: left;
+
+  * + & {
+    margin-left: 20px;
+  }
+}
+
+.navbar-right {
+  float: right;
+}
+
+.navbar-nav {
+  float: left;
+}
+
+.navbar .popover {
+  top: 100%;
+  max-width: none;
+  min-width: 152px;
+
+  .form-params-grid-3 {
+    width: 538px;
+  }
+
+  .form-params-grid-4 {
+    width: 672px;
+  }
+}
+
+/* Modifers
+ ========================================================================== */
+.navbar-nav-with-arrows {
+  > li > a {
+    @include arrows;
+    padding-right: 30px;
+
+    &:before {
+      right: 13px;
+      bottom: 23px;
+      @include triangle-color(b, rgb(135,135,135));
+    }
+
+    &:after {
+      right: 13px;
+      bottom: 11px;
+      @include triangle-color(t, rgb(135,135,135));
+    }
+  }
+}

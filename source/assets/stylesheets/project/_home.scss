@@ -1,0 +1,140 @@
+.home-index {
+  @extend .container;
+  overflow: hidden;
+}
+
+.home-banner {
+  @extend .cell-4;
+}
+
+.cell-grid {
+  margin-right: -25px;
+  font-size: 0;
+}
+
+@for $i from 1 through $countCol {
+  .cell-#{$i} {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: $widthGutter;
+    width: getWidthCol($i);
+  }
+}
+
+.news-more {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 0.9;
+
+  a {
+    display: inline-block;
+    border-bottom: 1px solid;
+  }
+
+  &:after {
+    @include icon(news-feed-more);
+    margin-top: 4px;
+    margin-left: 2px;
+    vertical-align: top;
+  }
+}
+
+.news-feed {
+  @extend .cell-4;
+
+  .new {
+    display: block;
+  }
+
+  .new + .new {
+    margin-top: 15px;
+  }
+
+  .new-date {
+    margin-bottom: 0;
+  }
+}
+
+.home-section_title {
+  @extend %title-section;
+  margin: 0 0 18px;
+}
+
+.posts-feed {
+  @extend .cell-8;
+
+  .preview-size-l {
+    float: left;
+  }
+
+  .preview-size-xs {
+    float: right;
+
+    + .preview {
+      margin-top: 25px;
+    }
+  }
+}
+
+.posts-feed-2 {
+  @extend .cell-8;
+
+  .preview:first-child {
+    margin-right: 25px;
+  }
+
+  .btn-more-go {
+    margin-top: 62px;
+  }
+}
+
+.news-feed, .posts-feed {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.topics-feed,
+.users-feed {
+  margin-top: 50px;
+}
+
+.products-feed {
+  margin-top: 35px;
+}
+
+.photos-feed {
+  margin-top: 25px;
+
+  .btn-more-go {
+    margin-top: 28px;
+  }
+}
+
+.products-feed {
+  margin-top: 37px;
+
+  .btn-more-go {
+    margin-top: 42px;
+  }
+}
+
+.products-feed-tags {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.topics-feed {
+  @extend .cell-9;
+
+  .btn-more-go {
+    margin-top: 30px;
+  }
+}
+
+.users-feed {
+  @extend .cell-3;
+  margin-right: 0;
+}

@@ -1,0 +1,276 @@
+%topic-link {
+  color: #000;
+  &:hover {
+    color: $brand-color;
+  }
+}
+
+.topics {
+  margin-top: 25px;
+}
+
+.topics__grid-2 {
+  @include tile-grid('.topic', 2, 25px, 25px);
+
+  .topic {
+    display: inline-block;
+    width: getWidthCol(6);
+    vertical-align: top;
+  }
+}
+
+.topics-index {
+  @extend .container;
+  @extend .row;
+}
+
+.topics-aside {
+  @extend .span-3;
+  margin-left: 0;
+}
+
+.topics-main {
+  @extend .span-6;
+}
+
+.topics-bside {
+  @extend .span-3;
+}
+
+.topics-title {
+  @extend %title-section;
+  margin-top: -2px;
+}
+
+.topic-create {
+  margin-top: 11px;
+  padding: 15px 15px 13px;
+  background: $main-bg;
+
+  .select2-container {
+    max-width: 234px;
+  }
+
+  .form-control {
+    max-width: 100%;
+  }
+
+  .form-control {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  textarea.form-control {
+    min-height: 90px;
+    padding: 7px;
+  }
+}
+
+.topics-pagination {
+  margin: 0 -80px;
+}
+
+.topic-create-bottom {
+  @extend .clearfix;
+}
+
+.topic-create-add-photo {
+  @extend .btn-file;
+  @extend %text-small;
+  float: left;
+  margin: 2px 0 0 8px;
+
+  &:before {
+    @include icon(topic-add-photo);
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
+  }
+}
+
+.topic-create-submit {
+  @extend .btn;
+  @extend .btn-primary;
+
+  &:before {
+    @include icon(topic-create-submit);
+    margin-left: -3px;
+    margin-right: 6px;
+    vertical-align: top;
+  }
+
+  .topic-create & {
+    float: right;
+    padding-top: 3px;
+  }
+}
+
+.topic-create-photos {
+}
+
+.topics-list {
+  margin-top: 24px;
+
+  > * + * {
+    margin-top: 25px;
+  }
+}
+
+.topics-list-counter {
+  margin-top: 22px;
+  color: rgb(178,178,178);
+  font-size: 13px;
+}
+
+.photo-thumb {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+.topic {
+  @extend .clearfix;
+  text-align: left;
+}
+
+.topic-pic {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: $main-bg;
+
+  img {
+    display: block;
+  }
+}
+
+.topic-info {
+  overflow: hidden;
+  margin-left: 111px;
+}
+
+.topic-title {
+  @extend %topic-link;
+  @include fade-out-gradient(rgba(255,255,255,0), rgba(255,255,255,1), 36px, 18px);
+  overflow: hidden;
+  display: block;
+  //height: 36px;
+  font-size: 15px;
+  font-weight: 600;
+  word-break: break-word;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.topic-body {
+  @include fade-out-gradient(rgba(255,255,255,0), rgba(255,255,255,1), 36px, 18px);
+  overflow: hidden;
+  height: 17px;
+  color: rgb(133,133,133);
+}
+
+.topic-counters {
+  margin: 7px 0 5px 0px;
+}
+
+.topic-autor {
+  @extend %topic-link;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.user-collection {
+  .topic-autor {
+    @include fade-out-gradient(rgba(255,255,255,0), rgba(255,255,255,1), 36px, 15px);
+  }
+
+  .topic-info {
+    margin-left: 91px;
+  }
+
+  .topic .counter + .counter {
+    margin-left: 8px;
+  }
+
+  .topic-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .topic-counters {
+    margin-bottom: 11px;
+  }
+}
+
+.topic-date {
+  display: inline-block;
+  color: rgb(130,130,130);
+  font-size: 12px;
+}
+
+.topic-theme {
+  margin-left: 0.25em;
+  font-size: 12px;
+}
+
+.topic__popular {
+  .topic-pic {
+    &:after {
+      @include p(a,7px,'','',-8px);
+      padding: 4px 5px 2px;
+      background: rgb(171,23,3);
+      border-radius: 2px;
+      color: #fff;
+      font-size: 9px;
+      content: "Популярно";
+    }
+  }
+}
+
+.topic__visited {
+  .topic-title:not(:hover) {
+    color: rgb(131,132,133);
+  }
+}
+
+.topic-create-photo {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  vertical-align: top;
+}
+
+.topic-create-photo + .topic-create-photo {
+  margin-left: 10px;
+}
+
+.topic-create-photo-delete {
+  @include p(a,5px,5px);
+  background: #fff;
+  border-radius: 50%;
+  padding: 3px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+
+  &:before {
+    @extend .close;
+    @extend .close-main;
+    display: block !important;
+    content: "";
+  }
+}
+
+.user-list-item {
+  margin-top: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

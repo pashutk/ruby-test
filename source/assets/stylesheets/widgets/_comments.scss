@@ -1,0 +1,33 @@
+.comments {
+  .trap, .controls {
+    display: none
+  }
+
+  .actions {
+    visibility: hidden;
+  }
+
+  .actions.show {
+    visibility: visible;
+  }
+}
+
+.comment-control {
+  visibility: hidden;
+}
+
+.comment-control-show {
+  visibility: visible;
+}
+
+.comment-bar {
+  visibility: hidden;
+
+  .comment:hover > & {
+    visibility: visible;
+  }
+
+  .comment-bar-active {
+    visibility: visible;
+  }
+}

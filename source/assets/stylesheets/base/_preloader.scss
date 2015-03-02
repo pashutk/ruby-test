@@ -1,0 +1,48 @@
+.preloader {
+  @include p(f,0,0,0,0);
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+}
+
+.preloader-show {
+  display: block;
+}
+
+.preloader-pic {
+  @include p(a,40%,0,'',0);
+  @include preloader(100px,10px);
+  margin: auto;
+}
+
+.preloader-running .preloader-pic {
+  animation: rotate 1s linear infinite;
+}
+
+.preloader-content {
+  margin: 252px auto 0;
+  width: getWidthCol(4);
+  font-weight: 600;
+}
+
+.preloader-info {
+  margin-top: 10px;
+  color: rgb(39, 39, 44);
+  font-size: 18px;
+}
+
+.preloader-info-list {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+.preloader-action {
+  float: right;
+  margin-top: 25px;
+}
+
+.preloader__with_content {
+  .preloader-pic {
+    top: 128px;
+  }
+}

@@ -1,0 +1,200 @@
+.moderate-photo
+  display: block
+  width: 100%
+  margin-bottom: 20px
+
+.moderate-photo_inner
+  display: block
+  width: 100%
+  background-color: #f4f4f4
+
+.moderate-photo_figure
+  width: 50%
+  float: left
+  position: relative
+
+  >.checkbox
+    position: absolute
+    top: 7px
+    left: 7px
+    label:after
+      background-position: -91px 0
+
+.moderate-photo_comment
+  padding: 15px
+  background-color: white
+  border: 3px solid #f4f4f4
+  border-top-width: 0
+  margin-top: -3px
+  border-right-width: 0
+  span.header
+    font-size: 13px
+    font-weight: bold
+    display: block
+    text-transform: uppercase
+
+.moderate-photo_settings
+  background-color: #f4f4f4
+  width: 50%
+  float: left
+  position: relative
+  padding: 20px
+  padding-bottom: 45px
+  .info
+    margin-bottom: 10px
+    b
+      margin-right: 5px
+    a
+      color: #1676d2
+      &:hover
+        border-bottom: 1px solid
+
+.moderate-photo_settings_section
+  p
+    margin-top: 15px
+    color: #888
+    span.header
+      font-size: 13px
+      font-weight: bold
+      margin-right: 5px
+      color: black
+      text-transform: uppercase
+  .radios
+    margin: 15px 0
+  .radio
+    width: 50%
+    float: left
+  .checkbox
+    display: inline-block
+    vertical-align: top
+    margin-left: 4%
+    width: 46%
+    float: left
+
+.moderate-photo_scale
+  width: 37px
+  height: 37px
+  position: absolute
+  top: 10px
+  right: 10px
+  background-color: rgba(0,0,0,0.6)
+  border-radius: 3px
+  background-image: url('./../images/scale.png')
+  background-repeat: no-repeat
+  background-position: 5px 5px
+  transition: all .5s ease
+  cursor: pointer
+  &:after
+    content: "На весь экран"
+    text-transform: uppercase
+    color: white
+    height: 100%
+    width: 66px
+    padding-left: 5px
+    padding-top: 2px
+    display: block
+    position: absolute
+    right: 37px
+    border-radius: 3px 0 0 3px
+    z-index: 0
+    opacity: 0
+    background-color: rgba(0,0,0,0.4)
+    transition: all .5s ease
+    pointer-events: none
+  &:hover
+    background-color: rgba(0,0,0,0.8)
+    border-radius: 0 3px 3px 0
+    &:after
+      opacity: 1
+
+.moderate-photo_settings_title
+  margin-bottom: 5px
+  font-size: 13px
+  color: #000
+  font-weight: bold
+  text-transform: uppercase
+  padding: 8px 12px
+  background-color: #ffffff
+  border-radius: 3px
+  cursor: pointer
+  &:before
+    display: inline-block
+    background: url(/assets/icon-s8a66015a0e-f4e3fa7b14b9920e84268fcf92474449.png) -27px -22px no-repeat
+    height: 8px
+    width: 13px
+    content: ""
+    margin-right: 5px
+  .param
+    color: #888
+    font-weight: normal
+    text-transform: none
+    margin-left: 5px
+
+.moderate-photo_settings_title.opened
+  margin-bottom: 0
+  border-radius: 3px 3px 0 0
+
+.moderate-photo_settings_title.opened+.moderate-photo_settings_list
+  display: block
+  margin-bottom: 5px
+
+.moderate-photo_settings_list
+  display: none
+  padding: 8px 12px
+  background-color: #ffffff
+  border-radius: 0 0 3px 3px
+
+
+
+  &:after
+    content: ''
+    display: block
+    clear: both
+.moderate-photo_settings_list_colors
+  .checkbox
+    display: inline-block
+    float: left
+    width: 20%
+    margin: 0
+    label
+      width: 100%
+      height: 12px
+      margin-top: 30px
+      &:before
+        top: -30px
+        left: 50%
+        margin-left: -9px
+      &:after
+        top: -25px
+        left: 50%
+        margin-left: -7px
+
+.moderate-photo_submit
+  position: absolute
+  bottom: 10px
+  right: 10px
+  button
+    display: inline-block
+    margin-left: 10px
+    border: 0
+    outline: 0
+    border-radius: 3px
+    padding: 5px 19px
+    color: white
+  button#no
+    background-color: #900
+    &:hover
+      background-color: lighten(#900, 10%)
+  button#yes
+    background-color: #346f18
+    &:hover
+      background-color: lighten(#346f18, 10%)
+
+.moderate-photo_events
+  padding: 10px 0
+  text-align: right
+  a
+    margin: 0 5px
+    &:hover
+      border-bottom: 1px solid #888
+      color: #888

@@ -1,0 +1,10 @@
+.posts__grid-4 {
+  @include tile-grid('.preview', 4, 25px, 40px);
+}
+
+.promo-project-jumbotron {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

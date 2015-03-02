@@ -1,0 +1,43 @@
+.preview-slider {
+  position: relative;
+  // for home index when banner with hover
+  z-index: 1;
+  margin-top: 25px;
+
+  .flex-counter {
+    @extend %counter-number;
+    @include p(a,5px,259px,'',304px);
+  }
+}
+
+.preview-slider-title {
+  @extend %title-section;
+  margin-bottom: 18px;
+}
+
+.preview-slider .flex-direction-nav {
+  @include p(a,7px,'','',260px);
+  overflow: hidden;
+  width: 147px;
+
+  li {
+    float: left;
+  }
+
+  li + li {
+    float: right;
+  }
+
+  a {
+    overflow: hidden;;
+    text-indent: -100px;
+  }
+}
+
+.preview-slider .flex-prev {
+  @include icon(preview-slider-prev);
+}
+
+.preview-slider .flex-next {
+  @include icon(preview-slider-next);
+}

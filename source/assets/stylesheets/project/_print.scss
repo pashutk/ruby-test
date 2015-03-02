@@ -1,0 +1,178 @@
+@media print {
+  * {
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .teaser-type-hd {
+
+    .teaser-main {
+      min-height: 0;
+      padding: 0;
+    }
+  }
+
+  .teaser-content-wrap {
+    margin-right: 0 !important;
+  }
+
+  .container,
+  .article-main-full,
+  .article-bottom,
+  .teaser-container {
+    width: 100% !important;
+  }
+
+  .article-products,
+  .article-footer,
+  .footer,
+  .admin-panel,
+  .article-actions,
+  .banner,
+  .article-topics,
+  .article-panel-title,
+  .article-likes,
+  .temp-likes,
+  .teaser-banner,
+  .topnav,
+  .topnav-placeholder,
+  .photo-show-prev,
+  .photo-show-next,
+  .photo-show-actions,
+  .photobox-close-primary,
+  .banner-content,
+  .news,
+  .photo-show-main::before,
+  .subnav,
+  .article-like-fb-page,
+  .article-read {
+    display: none !important;
+  }
+
+  .photobox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .photo-show-aside {
+    width: 100% !important;
+    top: auto !important;
+    right: 0;
+    bottom: 0;
+    min-height: 0 !important;
+    height: 200px;
+  }
+
+  .photo-show-main {
+    margin-right: 0;
+    height: calc(100% - 200px);
+  }
+
+  .page {
+    padding-bottom: 0 !important;
+  }
+
+  .article-header-counters {
+    float: none !important;
+  }
+
+  .teaser-likes {
+    display: none;
+  }
+
+  .comment-body {
+    margin-top: 0 !important;
+  }
+
+  .avatar-pic {
+    &::after {
+      display: none;
+    }
+  }
+
+  .comment-form {
+    display: none;
+  }
+
+  .comments-block {
+
+    .span-8 {
+      width: 100% !important;
+    }
+  }
+
+  .body-photobox {
+    .page {
+      display: none !important;
+    }
+
+    .photo-show-similar-products,
+    .photo-show-similar-products-pusher {
+      display: none !important;
+    }
+
+    .photo-show-panel {
+      display: none !important;
+    }
+  }
+}

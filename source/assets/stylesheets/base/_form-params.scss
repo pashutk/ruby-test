@@ -1,0 +1,141 @@
+.form-params {
+  min-width: 242px;
+  color: rgb(127,127,127);
+  text-transform: none;
+  font: 12px/1.3 $text-functional;
+}
+
+.form-params-label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.form-params-message {
+  margin-top: 8px;
+}
+
+.form-params-label-block {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-params-group-label {
+  display: block;
+  color: rgb(0,0,0);
+  font-size: 14px;
+}
+
+.form-params-item-checkbox {
+  // for vertical offset
+  > em {
+    position: relative;
+    top: 1px;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .jq-checkbox {
+    margin-right: 0;
+  }
+}
+
+.form-params-item-radio {
+  position: relative;
+  left: -2px;
+
+  // for vertical offset
+  > em {
+    position: relative;
+    top: 2px;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .jq-radio {
+    margin-right: 2px;
+    margin-bottom: 0;
+  }
+}
+
+.form-params-group + .form-params-group {
+  margin-top: 12px;
+}
+
+.form-params-item {
+  display: block;
+
+  .select2-container {
+    max-width: 143px;
+  }
+
+  .Cpicker {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.form-params-item + .form-params-item,
+.form-params-group-label + .form-params-item {
+  margin-top: 12px;
+}
+
+.form-params .Cpicker .Cpicker-input {
+  height: 20px;
+  border: 1px solid rgba(0,0,0,0.5);
+}
+
+
+.form-params-font {
+  .form-params-item + .form-params-item {
+    margin-top: 15px;
+  }
+}
+
+.form-params-color {
+  margin-top: 12px;
+}
+
+.form-params-allign {
+  margin-top: 12px;
+}
+
+.form-params-grid-3,
+.form-params-grid-4 {
+  padding: 0 5px;
+
+  > .form-params-group {
+    margin-top: 0;
+    float: left;
+    min-width: 80px;
+  }
+
+  > .form-params-group + .form-params-group {
+    margin-left: 20px;
+  }
+
+  .form-params-item + .form-params-item,
+  .form-params-group-label + .form-params-item {
+    margin-top: 6px;
+  }
+
+  .colors.form-params-item {
+    margin-top: 9px;
+  }
+}
+
+.form-params-for-title {
+}
+
+.form-params-for-announce {
+}
+
+.form-params-for-article-type {
+  min-width: 0;
+}
+
+.form-params-for-fill {
+  min-width: 0;
+}

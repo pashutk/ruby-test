@@ -1,0 +1,67 @@
+$countCol: 12;
+$widthGutter: 25px;
+$widthCol: 56px;
+$grid: 'fixed';
+
+@function getWidthCol($n) {
+  @return ($widthCol + $widthGutter) * $n - $widthGutter;
+}
+
+@for $i from 1 through $countCol {
+  .span-#{$i} {
+    float: left;
+    margin-left: $widthGutter;
+    width: getWidthCol($i);
+  }
+}
+
+.row {
+//  @include legacy-pie-clearfix;
+
+  [class^="span"]:first-child {
+    margin-left: 0;
+  }
+}
+
+@mixin container($padding: 0 25px, $clf: true) {
+  @if $clf == true {
+//    @include legacy-pie-clearfix;
+  }
+
+  @if $padding != 'no' {
+    padding: $padding;
+  }
+
+  margin: 0 auto;
+  width: 997px;
+}
+
+$countColFluid: 6;
+$widthGutterFluid: 1%;
+$widthColFluid: 20%;
+
+@function getWidthContainerFluid() {
+	@return (5/$countColFluid) * 100%;
+}
+
+@function getWidthColFluid() {
+	@return $widthColFluid - $widthGutterFluid;
+}
+
+@function getPositionFluid($n) {
+	@return (getWidthColFluid() + $widthGutterFluid)*$n;
+}
+
+@mixin rowFluid {
+	// 2 ситуации в одной, есть ширина колонок или нету
+	padding-right: 100% - (getWidthContainer() + (getWidthContainer()*($widthGutter/$widthCol))/$countCol);
+}
+
+@if $grid == 'fluid' {
+ @for $i from 1 through $countCol {
+    .fluid-grid .col-#{$i} {
+      left: getPosition($i - 1);
+    }
+  }
+}
+

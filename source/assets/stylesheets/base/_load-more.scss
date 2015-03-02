@@ -1,0 +1,46 @@
+.load-more {
+  display: block;
+  width: 100%;
+  background: $main-bg;
+  text-align: center;
+  font: 400 17px/normal $text-functional;
+  margin-bottom: 22px;
+  padding: 15px 0 0 0;
+  height: 52px;
+  color: rgb(0,0,0);
+  overflow: hidden;
+  text-indent: 5px;
+  transition: background $speed-fast, color $speed-fast;
+  cursor: pointer;
+
+  &:before {
+    @include pseudo;
+    @include preloader(23px,2px);
+    position: relative;
+    vertical-align: middle;
+    margin: -2px 7px 0 0;
+    transition: background $speed-fast;
+  }
+
+  &:hover {
+    background: $brand-bg;
+    color: rgb(255,255,255);
+
+    &:before {
+      border-color: #fff;
+      border-left-color: transparent;
+      animation: rotate-inverse 0.6s infinite linear;
+    }
+  }
+
+  &.is-loading {
+    &:before {
+      animation: rotate-inverse 0.6s infinite;
+    }
+  }
+}
+
+button.load-more {
+  border: none;
+  outline: none;
+}

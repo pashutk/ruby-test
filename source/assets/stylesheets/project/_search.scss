@@ -1,0 +1,40 @@
+.search-no-result {
+  margin: 105px 0 80px;
+  color: $title-color;
+  text-align: center;
+  font: 700 35px/normal $text-main-family;
+}
+
+.search-section-title {
+  @extend %title-section;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.p-search {
+  @extend .container;
+
+  .page-index-description {
+    margin-top: 3px;
+  }
+
+  .btn-more-go {
+    margin-top: 55px;
+    padding: 15px 0;
+    height: 53px;
+    font-size: 17px;
+
+    &:after {
+      @include icon(btn-more-go-big);
+    }
+
+    &:hover:after {
+      @include icon(btn-more-go-big-hover);
+    }
+  }
+
+  .btn-more-go + .search-section-title {
+    margin-top: 70px;
+  }
+}

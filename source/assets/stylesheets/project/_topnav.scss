@@ -1,0 +1,133 @@
+.topnav {
+  @include legacy-pie-clearfix;
+  position: relative;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  display: block;
+  background: #fff;
+  font-family: $nav-font-family;
+  color: rgb(33,33,33);
+
+  &.is-fixed {
+    position: fixed !important;
+    top: 0 !important;
+  }
+}
+
+.topnav_logo {
+  float: left;
+  margin: 17px 0 15px;
+}
+
+.question-nav {
+  float: left;
+  padding-top: 16px;
+  height: 49px;
+  cursor: pointer;
+
+  &:before {
+    @include icon(topnav-question);
+  }
+
+  &:hover:before {
+    @include icon(topnav-question-hover);
+  }
+
+  .dropdown-content {
+    padding-top: 13px;
+    padding-bottom: 65px;
+  }
+}
+
+.topnav-add {
+  float: right;
+  margin: 16px 12px 0 10px;
+  color: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:before {
+    @include icon(topnav-add);
+    vertical-align: top;
+  }
+
+  &:hover {
+    color: rgb(0,0,0);
+    &:before {
+      @include icon(topnav-add-hover);
+    }
+  }
+}
+
+.topnav-search {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 573px;
+  margin: 17px 10px 0 30px;
+  height: 37px;
+  white-space: nowrap;
+
+  &:hover,
+  &.open {
+    z-index: 3;
+
+    .topnav-search-btn {
+      opacity: 0;
+    }
+  }
+
+  .search {
+    border-color: rgb(244,244,244);
+  }
+}
+
+.topnav-search-btn {
+  position: relative;
+  padding: 12px 13px 0 15px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid rgb(244,244,244);
+  border-radius: 5px;
+  font-size: 14px;
+
+  > a {
+    color: rgb(98,98,98);
+    font-size: 14px;
+    content: "Найти идеи, фото, товары";
+  }
+
+  &:before {
+    @include icon(search-brand);
+    position: relative;
+    top: -1px;
+    vertical-align: top;
+    margin-right: 13px;
+  }
+
+  @include fade-out-gradient(rgba(255,255,255,0), rgba(255,255,255,1), 50px,100%);
+  &:after {
+    border-radius: 5px;
+  }
+}
+
+.topnav-search-content {
+  @include p(a,0,'',0,0);
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 40px;
+  visibility: hidden;
+  transition: width 0.15s, opacity 0.15s;
+
+  .open > &,
+  .topnav-search:hover > & {
+    visibility: visible;
+  }
+}
+
+
+
+

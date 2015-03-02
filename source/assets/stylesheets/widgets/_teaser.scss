@@ -1,0 +1,254 @@
+.teaser {
+  opacity: 0;
+}
+
+.teaser-main {
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transition: opacity 0.4s;
+}
+
+.teaser-banner {
+  position: absolute;
+}
+
+.teaser-fill {
+  @include p(a,0,0,0,0);
+
+  // for blur fill
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.teaser-bg {
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.teaser-container {
+  position: relative;
+  width: getWidthCol(12);
+  margin: 0 auto;
+  height: 100%;
+  opacity: 0;
+}
+
+.teaser-content-wrap {
+  position: relative;
+  height: 100%;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.teaser-content {
+  position: relative;
+  display: inline-block;
+  width: 450px;
+}
+
+.teaser-content-wrap-complete {
+  opacity: 1;
+}
+
+.teaser-content-fill {
+  @include p(a,0,0,0,0);
+}
+
+.teaser-content-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.teaser-hr {
+  margin-top: 12px;
+  display: block;
+  height: 4px;
+  width: 175px;
+  background: #fff;
+}
+
+.teaser {
+  .symbol-counter {
+    position: relative;
+    display: none;
+    color: inherit;
+  }
+
+  .teaser-title:focus,
+  .teaser-announce:focus {
+    & + .symbol-counter  {
+      display: inline-block;
+    }
+  }
+}
+
+/* Layer for position "teaser load btn" in editor */
+.teaser-load {
+  @include p(a,25px,'','',25px);
+  z-index: 1;
+  text-align: left;
+}
+
+/* Teaser has image, need for EDITOR */
+.teaser-with-image {
+  .teaser-load {
+    display: none;
+    z-index: 1000;
+  }
+
+  &:hover .teaser-load {
+    display: block;
+  }
+}
+
+textarea.teaser-title {
+  @include reset-element;
+  min-height: 40px;
+}
+
+textarea.teaser-announce {
+  @include reset-element;
+  min-height: 20px;
+}
+
+
+/* For lazy load */
+.teaser-lazy-pic {
+  @include p(a,0,0);
+  opacity: 0;
+  visibility: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+/* Fade in after lazy load */
+.teaser-loaded {
+  opacity: 1;
+
+  .teaser-container  {
+    opacity: 1;
+  }
+}
+
+.teaser-content-fill {
+  display: none;
+}
+
+
+.teaser-type-standart {
+  .teaser-main {
+    box-sizing: content-box;
+    background-image: none !important;
+  }
+}
+
+/* background logic */
+.teaser-type-standart {
+  .teaser-main,
+  .teaser-container {
+    background-image: none !important;
+  }
+}
+
+.teaser-type-hd {
+  .teaser-main,
+  .teaser-content-wrap {
+    background-image: none !important;
+  }
+}
+
+.teaser-type-super-hd {
+  .teaser-container,
+  .teaser-content-wrap {
+    background-image: none !important;
+  }
+}
+
+/* fill logic */
+.teaser-with-announce-small {
+  .teaser-content-fill-type-small {
+    display: block;
+  }
+}
+
+.teaser-with-announce-full,
+.teaser-with-announce-full-gradient {
+  &.teaser-type-standart {
+    .teaser-content-fill-type-full-for-standart {
+      display: block;
+    }
+  }
+
+  &.teaser-type-hd {
+    .teaser-content-fill-type-full-for-hd {
+      display: block;
+    }
+  }
+
+  &.teaser-type-super-hd {
+    .teaser-content-fill-type-full-for-super-hd {
+      display: block;
+    }
+  }
+}
+
+.teaser-hr-pos-left {
+  margin-right: auto;
+}
+
+.teaser-hr-pos-center {
+  margin: 0 auto;
+}
+
+.teaser-hr-pos-right {
+  margin-left: auto;
+}
+
+
+.teaser-pos-top-right,
+.teaser-pos-center-right,
+.teaser-pos-bottom-right {
+  text-align: right;
+
+  .teaser-hr {
+    margin-left: auto;
+  }
+}
+
+.teaser-pos-top-left,
+.teaser-pos-center-left,
+.teaser-pos-bottom-left {
+  text-align: left;
+
+  .teaser-hr {
+    margin-right: auto;
+  }
+}
+
+.teaser-pos-top-center,
+.teaser-pos-center-center,
+.teaser-pos-bottom-center {
+  text-align: center;
+
+  .teaser-hr {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+#teaser-simple {
+  .allign {
+    position: relative;
+  }
+
+  .teaser-content {
+    width: 100%;
+  }
+
+  .teaser-banner {
+    top: 0;
+  }
+}

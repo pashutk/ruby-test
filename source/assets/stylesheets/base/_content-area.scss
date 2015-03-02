@@ -1,0 +1,36 @@
+.content-area {
+  font-family: $text-main-family;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 23px;
+  color: rgb(42,42,42);
+
+  p {
+    margin: 0 0 15px;
+  }
+
+  a {
+    color: #207CC6;
+
+    &:hover {
+      border-bottom: 1px solid;
+      color: #990000;
+    }
+  }
+
+  ul {
+    list-style: circle inside;
+  }
+
+  font[size="3"] {
+    font-size: 16px;
+  }
+
+  font[size="4"] {
+    font-size: 20px;
+  }
+
+  font[size="5"] {
+    font-size: 25px;
+  }
+}

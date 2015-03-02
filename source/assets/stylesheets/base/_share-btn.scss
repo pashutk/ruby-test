@@ -1,0 +1,169 @@
+.share-block {
+  margin-bottom: 45px;
+}
+
+.share-block_title,
+.share-btn {
+  font-size: 13px;
+}
+
+.share-block_title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.share-block_title {
+  margin-bottom: 18px;
+  color: rgb(81,81,81);
+}
+
+.share-btn {
+  display: inline-block;
+  color: #fff;
+  border-radius: $border-radius-base;
+  vertical-align: top;
+}
+
+.share-btn_count {
+  position: relative;
+  display: inline-block;
+  border-left: 1px solid rgba(255,255,255,0.7);
+  line-height: 1.5;
+  padding: 0 7px;
+  text-align: center;
+  color: inherit;
+  transition: color $speed-fast;
+
+  &:after {
+    @include p(a,-2px,0,0,0);
+    @include preloader(15px,2px,#fff);
+    display: block;
+    margin: auto;
+    content: '';
+    opacity: 0;
+    transition: opacity $speed-fast;
+  }
+
+  &.is-loading {
+    color: transparent;
+
+    &:after {
+      animation: rotate 1s linear infinite;
+      opacity: 1;
+    }
+  }
+}
+
+.share-btn__tw {
+  background: rgb(27,153,213);
+
+  &:hover {
+    background: shade(rgb(27,153,213), 15)
+  }
+}
+
+.share-btn__vk {
+  background: rgb(94,131,170);
+
+  &:hover {
+    background: shade(rgb(94,131,170), 15)
+  }
+}
+
+.share-btn__fb {
+  background: rgb(71,94,147);
+
+  &:hover {
+    background: shade(rgb(71,94,147), 15)
+  }
+}
+
+.share-btn__size_s {
+  height: 25px;
+  padding: 0 10px;
+  line-height: 25px;
+
+  &:before {
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &.share-btn__tw:before {
+    @include icon(share-btn-tw-mini);
+  }
+
+  &.share-btn__vk {
+    &:before {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      content: "В";
+    }
+
+    .share-btn_count:not(.is-loading):before {
+      @include icon(share-btn-vk-like);
+      position: relative;
+      top: 1px;
+      margin-right: 10px;
+    }
+
+    .share-btn_count {
+      width: auto;
+      margin-left: 2px;
+      padding-right: 10px;
+      padding-left: 13px;
+    }
+  }
+
+  &.share-btn__fb:before {
+    @include icon(share-btn-fb-mini);
+    margin-top: -2px;
+  }
+
+  .share-btn_count {
+    margin-left: 10px;
+    margin-right: -10px;
+    min-width: 25px;
+  }
+}
+
+.share-btn__size_l {
+  height: 44px;
+  padding: 0 15px;
+  line-height: 46px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:before {
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &.share-btn__tw:before {
+    @include icon(share-btn-tw);
+  }
+
+  &.share-btn__vk:before {
+    @include icon(share-btn-vk);
+  }
+
+  &.share-btn__fb:before {
+    @include icon(share-btn-fb);
+    margin-top: -2px;
+    margin-right: 15px;
+  }
+
+  .share-btn_count {
+    margin-left: 15px;
+    margin-right: -15px;
+    width: 40px;
+  }
+}

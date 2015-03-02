@@ -1,0 +1,178 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+$modal-padding-horizontal: 20px;
+
+
+// Container that the modal scrolls within
+.modal {
+  @include p(f,0,0);
+  z-index: 20;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s;
+  text-align: center;
+  padding: 52px 0;
+
+  &:before {
+    display: inline-block;
+    height: 100%;
+    content: "";
+    vertical-align: middle;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+// Kill the scroll on the body
+.modal-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Modal background
+.modal-backdrop {
+  @extend .overlay;
+  @extend .overlay-show;
+  z-index: auto;
+  background: rgba(0,0,0,0.4);
+}
+
+// Actual modal
+.modal-body {
+  position: relative;
+  margin: auto;
+  outline: none;
+}
+
+
+/* THEME */
+.modal-dialog {
+  transform: translateY(-20%);
+  opacity: 0;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.modal-open .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// BODY
+.modal-body {
+  width: 423px;
+  background: #fff;
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  border-top: 4px solid $brand-color;
+  padding: 15px $modal-padding-horizontal;
+}
+
+// Close icon
+.modal-close {
+  @extend .close;
+  @extend .close-main;
+  @extend .tooltip-pseudo;
+  @include p(a,16px,7px);
+}
+
+// Title text within header
+.modal-title {
+  color: #000;
+  margin: 0;
+  font: 600 25px/normal $text-main-family;
+  text-align: left;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-content {
+  position: relative;
+  margin: 0 $modal-padding-horizontal;
+}
+
+// Footer (for actions)
+.modal-footer {
+  @extend .clearfix;
+  padding: 25px 25px 20px;
+  text-align: right; // right align buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+
+  .btn {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+/* Modificators */
+.modal-top-center {
+  padding-top: 150px;
+
+  .modal-dialog, &:before {
+    vertical-align: top;
+  }
+}
+
+.modal-without-footer {
+  .modal-content {
+    padding-bottom: 15px;
+  }
+}
+
+.modal-change-city {
+  .modal-body {
+    width: 272px;
+  }
+
+  .form-col-1 + .form-col-1 {
+    margin-top: 10px;
+  }
+}
+
+/* Cascade */
+.modal {
+  textarea.form-control {
+    min-height: 0 !important;
+    padding-top: 7px;
+    height: 102px;
+
+    &:focus {
+      background: transparent;
+    }
+  }
+}
+
+.modal-content {
+    position: relative;
+    textarea + .symbol-counter {
+        @include p(a,'',5px,10px);
+        font-size: 10px;
+        font-family: "PF Din Text Pro";
+        color: rgb(95,95,95);
+    }
+}
+
+#categories-layer {
+  @include p(f,f);
+  z-index: 30;
+  display: none;
+}

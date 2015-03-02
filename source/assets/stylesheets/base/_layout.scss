@@ -1,0 +1,91 @@
+html,
+body {
+  &.body-photobox {
+    overflow: hidden;
+  }
+}
+
+.page {
+  position: relative;
+  padding-bottom: 300px;
+  width: 100%;
+  min-height: 100%;
+
+  &:before {
+    @include p(a,0,0,0,0);
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    content: "";
+  }
+
+  .device-desktop &:before {
+    width: 997px;
+  }
+}
+
+.page-overlay {
+  @include p(f,f);
+  z-index: 5;
+  opacity: 0;
+  display: none;
+  background: rgba(0,0,0,0.5);
+  transition: 0.2s all;
+
+  &.is-show {
+    display: block;
+    opacity: 1;
+  }
+}
+
+#main {
+  position: relative;
+}
+
+.has-modal-open {
+  overflow: hidden;
+}
+
+#banner-positioned {
+  @include p(a,25px,25px,'','');
+  width: 300px;
+  z-index: 1;
+
+  &.fixed {
+    @include p(f,62px,25px);
+  }
+
+  /*
+  .banner-teaser {
+    @include lp-height(700) {
+      display: none !important;
+    }
+  }
+  */
+}
+
+#fixed-banner-marker {
+  visibility: hidden;
+  width: 100%;
+  height: 1px;
+}
+
+.container {
+  position: relative;
+  @include container;
+}
+
+.clearfix {
+//  @include legacy-pie-clearfix;
+}
+.clearfix:after, .form-modal:after, .form-modal-content:after, .form-bottom:after, .form-grid-2 .form-group:after, .form-grid-2 .form-group--submit:after, .avatar-big:after, .modal-footer:after, .collection:after, .topic-create-bottom:after, .topic:after, .page-index-content-info:after, .products-index-header:after, .product-show-content:after, .product-show-panel:after, .product-show-metrics:after, .login-system-form-2-col:after, .yml-setup-header:after{
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.clear {
+  clear: left;
+}

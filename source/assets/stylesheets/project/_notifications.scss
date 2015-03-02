@@ -1,0 +1,37 @@
+.notifications {
+  @extend .container;
+  //margin-top: 28px;
+}
+
+.notifications-main {
+  @extend .span-8;
+  margin-left: 0;
+}
+
+.notifications-aside {
+  @extend .span-4;
+  margin-top: 25px;
+}
+
+.notifications-title {
+  margin-bottom: 17px;
+}
+
+.notifications-section + .notifications-section {
+  margin-top: 21px;
+}
+
+.notifications-section-title {
+  margin-bottom: 2px;
+  color: #000;
+  font-weight: 700;
+}
+
+.notification {
+  color: rgb(42,42,42);
+  font-size: 15px;
+
+  a {
+    @extend .link-primary;
+  }
+}

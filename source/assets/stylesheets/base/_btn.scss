@@ -1,0 +1,418 @@
+/*
+ * Name: btn
+ *
+ * Markup: a.btn, button.btn
+ *
+ * Elements:
+ *
+ * Modifers:
+ *
+ */
+
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+// Core styles
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  padding: 4px 9px;
+  height: 25px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  @include user-select(none);
+  font: 400 13px/normal $text-functional;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.65);
+    @include box-shadow(none);
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+  }
+}
+
+input.btn, button.btn {
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// Elements
+// --------------------------------------------------
+.btn-counter {
+  position: relative;
+  display: inline-block;
+  padding-left: 9px;
+  margin-left: 9px;
+  font-style: normal;
+  font-size: 12px;
+  font-family: $text-functional;
+
+  &:before {
+    @include p(a,-3px,'',-2px,0);
+    @include pseudo();
+    width: 1px;
+  }
+}
+
+// Modificator
+// --------------------------------------------------
+.btn + .btn {
+  margin-left: 5px;
+}
+
+.btn-link {
+  padding-right: 0;
+  padding-left: 0;
+  color: rgb(71, 112, 201);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn-default {
+  border: 1px solid rgb(222,222,220);
+  background: rgb(196,196,196);
+  background: linear-gradient(to bottom, $main-bg, rgb(222,222,220));
+  color: rgb(63,63,63);
+  text-transform: none;
+  transition: color $speed-fast, background $speed-fast, border-color $speed-fast;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background: linear-gradient(to bottom, rgb(171,20,0), rgb(110,0,0));
+    border: 1px solid rgb(110,0,0);
+    color: #fff;
+  }
+
+  &:hover.btn-brand {
+    background: $brand-color;
+  }
+}
+
+.btn-primary {
+  background: rgb(81,81,81);
+  color: #fff;
+  box-shadow: $btn-shadow;
+
+  &:hover {
+    background: $brand-color;
+  }
+
+  .btn-counter {
+    &:before {
+      background: #fff;
+      background: rgba(255,255,255,0.4);
+    }
+  }
+}
+
+.btn-danger {
+  background: rgb(173,18,0);
+  border: 1px solid rgb(155,0,0);
+  color: #fff;
+
+  &:hover {
+    background: #fff;
+    color: $brand-color;
+  }
+}
+
+.btn-success {
+  background: rgb(52,111,24);
+  box-shadow: 0 0 3px rgba(255,255,255,0.8);
+  color: #fff;
+
+  &:hover {
+    background: #fff;
+    border: 1px solid rgb(52,111,24);
+    color: rgb(52,111,24);
+  }
+}
+
+.btn-size-big {
+  padding: 3px 17px;
+  height: 30px;
+  font-size: 17px;
+}
+
+/* Context */
+@mixin btn-decor-offset($top: 0, $left: 0, $right: 0) {
+  &:before {
+    position: relative;
+    top: $top;
+    margin-left: $left;
+    margin-right: $right;
+  }
+}
+
+.btn-add-to-collection {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-add-to-collection);
+  @include btn-decor-offset(0, -1px, 8px);
+}
+
+.btn-add-to-collection-counter {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-add-to-collection);
+  @include btn-decor-offset(1px, -1px, 5px);
+
+  .btn-counter {
+    padding-left: 8px;
+    margin-left: 8px;
+  }
+}
+
+.btn-single {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn-comments {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.btn-reply {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-reply);
+  @include btn-decor-offset(1px, -2px, 4px);
+}
+
+.btn-like-counter {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-like);
+  @include btn-decor-offset(1px, -1px, 5px);
+}
+
+.btn-send {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-send);
+  @include btn-decor-offset(1px, -1px, 5px);
+}
+
+.btn-shot-send {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-send);
+  @include btn-decor-offset(1px, -1px, -1px);
+}
+
+.btn-print {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-print);
+  @include btn-decor-offset(-1px, -1px, 5px);
+
+  &:hover {
+    @include btn-decor(btn-print-hover);
+  }
+}
+
+.btn-shot-print {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-print);
+  @include btn-decor-offset(-1px, -1px, -1px);
+}
+
+.btn-exit {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-exit);
+  @include btn-decor-offset(0, -1px, 5px);
+  text-transform: none;
+}
+
+.btn-phone {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-phone);
+  @include btn-decor-offset(0, 1px, 11px);
+  text-transform: none;
+}
+
+.btn-refresh {
+  @extend .btn;
+  @extend .btn-primary;
+  @include btn-decor(btn-refresh);
+  @include btn-decor-offset(-2px, -3px, 3px);
+  text-transform: none;
+}
+
+.btn-phone-active,
+.btn-phone-active:hover {
+  background: rgb(245, 245, 245);
+  color: rgb(106,106,106);
+  box-shadow: none;
+  cursor: default;
+
+  &:before {
+    @include icon(btn-phone-active);
+  }
+}
+
+.btn-more-go {
+  display: block;
+  margin-top: 25px;
+  padding: 15px 0;
+  height: 52px;
+  background: $main-bg;
+  text-align: center;
+  color: rgb(63,63,63);
+  font: 400 17px/normal $text-main-family;
+  transition: color $speed-fast, background $speed-fast;
+
+  &:after {
+    @include icon(btn-more-go);
+    position: relative;
+    right: 3px;
+    margin-top: -2px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background: $brand-bg;
+    color: #fff;
+
+    &:after {
+      @include icon(btn-more-go-hover);
+    }
+  }
+}
+
+.btn-more-go__size-s {
+  padding: 12px 0;
+  height: 42px;
+  font-size: 14px;
+}
+
+.btn-e-commerce {
+  padding-top: 3px;
+  font-size: 15px;
+
+  &:before {
+    @include icon(e-commerce);
+    vertical-align: top;
+    margin: 1px 4px 0 0;
+  }
+
+  &:hover {
+    &:before {
+      @include icon(e-commerce-inverse);
+    }
+  }
+}
+
+.label-exit {
+  &:after {
+    @include icon(label-exit);
+    vertical-align: top;
+    margin-left: 5px;
+  }
+}
+
+.btn-fast-view {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 25px;
+  border-radius: 2px;
+
+  &:before {
+    @include p(a,f);
+    @include icon(fast-view);
+    margin: auto;
+  }
+
+  &:after {
+    display: none;
+    @include p(a,0,'',0,100%);
+    padding: 5px 8px;
+    background: rgba(63,63,63,0.5);
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    white-space: nowrap;
+    content: "Быстрый просмотр";
+  }
+
+  &:hover {
+    border-radius: 2px 0 0 2px;
+
+    &:after {
+      display: block;
+    }
+  }
+}
+
+.btn-add {
+  padding-right: 25px;
+  padding-left: 25px;
+
+  &:before {
+    margin: 0 4px 0 0;
+    font-size: 13px;
+    content: "+";
+  }
+}
+
+.btn-shot {
+  &:before {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,153 @@
+.page-side {
+  @include p(a, 25px, '', '', 0);
+  z-index: 5;
+  width: 148px;
+  visibility: hidden;
+
+  .article-new  & {
+    top: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: -148px;
+    visibility: visible;
+  }
+}
+
+.page-side_content {
+  width: 148px;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  &.is-fixed {
+    position: fixed;
+    top: 77px;
+    opacity: 1;
+  }
+}
+
+.page-side_actions {
+  a {
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+  }
+}
+
+.page-side_btn {
+  @extend %square-white;
+  margin-bottom: 10px;
+  margin-left: auto;
+  border: 1px solid rgba(191,191,191,0.25);
+  cursor: pointer;
+
+  &:after {
+    opacity: 0.5;
+  }
+
+  &:hover, &.is-open {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.page-side_btn__back-to-top {
+  cursor: pointer;
+  clear: both;
+
+  &:after {
+    @include p(a,13px,'','',6px);
+    @include icon(back-to-top);
+  }
+}
+
+.page-side_btn__share {
+  &:after {
+    @include p(a,f);
+    @include icon(share-dropdown);
+    margin: auto;
+    opacity: 0.35;
+  }
+}
+
+.page-side_btn__admin {
+  margin-bottom: 13px;
+  line-height: 37px;
+  text-align: center;
+
+  &:after {
+    color: rgb(255,67,67);
+    font-size: 20px;
+    content: "A";
+    opacity: 0.35;
+    transition: 0.2s opacity ease-in-out;
+  }
+}
+
+.page-side_section {
+  position: relative;
+  margin-bottom: 15px;
+  display: block;
+  text-align: right;
+}
+
+.page-side_section_drop {
+  display: none;
+}
+
+.page-side_section__share {
+  .temp-likes {
+    height: auto;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+
+  li, li:first-child {
+    display: block;
+    float: right;
+    clear: both;
+    margin: 0 0 10px;
+    width: 76px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-side__index {
+  opacity: 1;
+}
+
+.admin-nav {
+  margin-bottom: 13px;
+  font-size: 11px;
+}
+
+.admin-nav_title {
+  margin-bottom: 3px;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.admin-nav_link {
+  display: block;
+  font: 11px/normal "Tahoma";
+  color: rgb(0,136,238);
+}
+
+.admin-nav_link__reset {
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    @include icon(admin-link-reset);
+    position: relative;
+    top: 1px;
+    margin: 0 5px 0 0;
+  }
+}

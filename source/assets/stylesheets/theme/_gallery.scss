@@ -1,0 +1,126 @@
+.gallery {
+  padding-top: 32px;
+
+  .flex-direction-nav {
+    @include p(a,0,0,'',0);
+    margin: auto;
+    width: 143px;
+    z-index: 10;
+  }
+
+  .flex-direction-nav a  {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    text-indent: -150px;
+  }
+
+  .flex-direction-nav li {
+    display: inline-block;
+
+    float: left;
+
+    & + li {
+      float: right;
+    }
+  }
+
+  .flex-direction-nav .flex-prev {
+    @include icon(gallery-prev);
+  }
+
+  .flex-direction-nav .flex-next {
+    @include icon(gallery-next);
+  }
+
+  .flex-counter {
+    @extend %counter-number;
+    @include p(a, -2px, 0, '', 0);
+  }
+}
+
+.gallery-item-btns {
+  @include p(a,'','',15px,15px);
+  @include hoverableFade('.gallery li');
+  z-index: 1;
+  padding: 13px;
+  background: rgba(255,255,255,0.5);
+
+  .btn {
+    box-sizing: border-box;
+  }
+}
+
+.gallery-btn-fullsize {
+  @include p(a,15px,15px);
+  @include hoverableFade('.gallery li');
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 42px;
+  width: 42px;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.5);
+  color: transparent;
+  text-align: left;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  transition: all $speed-fast ease-in-out;
+  font-weight: 600;
+
+  &:before {
+    @include p(a,0,0,0);
+    box-sizing: border-box;
+    width: 42px;
+    content: "";
+    background: rgba(0,0,0,0.5);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &:after {
+    @include p(a,8px,8px);
+    @include icon(gallery-btn-fullsize);
+    box-sizing: border-box;
+  }
+
+  span {
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 42px 0 7px;
+    width: 112px;
+    opacity: 0;
+  }
+
+  .gallery-img-wrap:hover &,
+  .device-mobile & {
+    width: 112px;
+    color: #fff;
+
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+.gallery-item-right,
+.gallery-item-left {
+  @include p(a,0,50%,0,0);
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-item-right {
+  right: 0;
+  left: 50%;
+}
+
+.gallery-without-controls {
+  padding-top: 0;
+
+  .flex-direction-nav {
+    display: none;
+  }
+}
+

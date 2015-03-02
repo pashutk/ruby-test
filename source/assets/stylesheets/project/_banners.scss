@@ -1,0 +1,28 @@
+.banner {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  height: 600px;
+}
+
+.banner-theme {
+  height: 395px;
+  height: 258px;
+}
+
+.banner-teaser {
+  height: 90px;
+}
+
+.banner-teaser + .banner,
+.banner + .banner-teaser {
+  margin: 25px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.banner + .banner-theme {
+  margin-top: 75px;
+}

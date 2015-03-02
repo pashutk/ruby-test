@@ -1,0 +1,454 @@
+.login-system {
+  @include p(f,0,0);
+  z-index: 21;
+  background: image-url('inmyroom/login-system-bg.jpg') center top no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  &.is-show {
+    visibility: visible;
+  }
+
+  &:before {
+    @include p(f,f);
+    display: block;
+    background: rgba(0,0,0,0.5);
+    content: "";
+  }
+
+  .close-box {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .form-control {
+    max-width: 100%;
+    height: 40px;
+    font-size: 15px;
+    padding: 5px 12px 4px;
+    border-radius: 3px;
+
+    &:focus {
+      color: #000;
+      box-shadow: none;
+      border-color: rgb(255,211,211);
+    }
+  }
+
+  .btn-primary {
+    padding-right: 11px;
+    padding-left: 11px;
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .select2-container {
+    max-width: 100%;
+  }
+
+  .select2-container-single-open {
+    padding: 0;
+  }
+}
+
+.login-system-authentication,
+.login-system-choice-type,
+.login-system-registration-simple,
+.login-system-registration-pro,
+.login-system-registration-company {
+  position: absolute;
+  display: table;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.login-system_inner {
+  display: table-cell;
+  height: 100%;
+  padding: 50px 0;
+  vertical-align: middle;
+}
+
+.login-system_panel {
+  position: relative;
+  width: 380px;
+  margin: 0 auto;
+  padding: 15px 0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.login-system_registration-intro {
+  float: left;
+  width: 265px;
+  margin: 22px 0 0 112px;
+}
+
+.login-system-authentication {
+  position: relative;
+  margin: 0 auto;
+  width: 870px;
+
+  .login-system_panel {
+    float: left;
+  }
+}
+
+.login-system-authentication_inner {
+  position: relative;
+}
+
+.login-system_title {
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-system_panel-title {
+  @extend %title-section;
+  margin: 18px 0;
+  text-align: center;
+  text-transform: none;
+
+  .login-system-registration-company & {
+    margin: 1px 0 14px;
+  }
+}
+
+.login-system-btn-registration {
+  padding: 11px 35px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.login-system_registration-intro {
+  color: #fff;
+}
+
+.login-system_registration-intro_title {
+  @extend %title-section;
+  color: #fff;
+  margin-bottom: 8px;
+  text-transform: none;
+}
+
+.login-system_registration-intro_text {
+  margin-bottom: 15px;
+}
+
+.login-system_divider {
+  @include p(a,f);
+  z-index: 1;
+  padding-top: 62px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+
+  &:before,
+  &:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 1px;
+    margin: auto;
+    background: #fff;
+    content: "";
+  }
+
+  &:before {
+    top: 0;
+    bottom: calc(100% - 40px);
+  }
+
+  &:after {
+    top: 105px;
+    height: 316px;
+    bottom: 0;
+  }
+
+  & ~ * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.login-system_registration-intro_outro {
+  margin-top: 10px;
+
+  dt {
+    float: left;
+    font-size: 35px;
+  }
+
+  dd {
+    position: relative;
+    top: 3px;
+    left: -2px;
+    overflow: hidden;
+  }
+}
+
+.login-system-registration-simple {
+  .login-system-panel {
+    margin-bottom: 29px;
+  }
+}
+
+.login-system .social-authentication {
+  position: relative;
+  overflow: hidden;
+  margin: 15px auto 18px;
+  padding: 0 30px;
+
+  a {
+    display: block;
+    float: left;
+  }
+
+  a + a {
+    margin-left: 16px;
+  }
+}
+
+.login-system-main-select {
+  margin-bottom: 22px;
+
+  .select2-container {
+    margin-top: 0;
+  }
+
+  > * {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+}
+
+.login-system-form {
+  position: relative;
+  margin: 0;
+  padding: 25px 30px;
+  background: $main-bg;
+}
+
+.login-system-form-2-col {
+  @extend .clearfix;
+
+  .form-col-1 {
+    float: left;
+    width: 48%;
+
+    + .form-col-1 {
+      margin-left: 4%;
+    }
+  }
+
+  .form-col-2 {
+    .form-control {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+
+.login-system-main-input {
+  padding-top: 7px;
+  margin-bottom: 20px;
+}
+
+.form-group-text {
+  color: rgb(21,21,21);
+  font-size: 13px;
+  font-family: $text-functional;
+  b {
+    font-weight: bold;
+    color: rgb(31,110, 0);
+  }
+
+  span {
+    font-weight: bold;
+    color: $brand-color;
+  }
+}
+
+.login-system-form-choise-type {
+  margin: -6px auto 0;
+  width: 539px;
+
+  label {
+    color: rgb(0,0,0);
+    font: 16px/normal $text-functional;
+  }
+}
+
+.login-system-form-send {
+  @include legacy-pie-clearfix;
+  margin: 25px 30px 15px;
+
+  .btn {
+    float: right;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .btn + .btn {
+    position: relative;
+    z-index: 101;
+    margin-right: 10px;
+  }
+}
+
+.login-system-text {
+  margin-bottom: 15px;
+  color: rgb(148,148,148);
+  font: 14px/normal $text-functional;
+  text-align: center;
+  text-indent: 5px;
+}
+
+.form-group-with-append-text {
+  position: relative;
+  a {
+    @include p(a,13px, 10px);
+    color: rgb(172,52,54);
+    font-size: 12px;
+  }
+}
+
+.btn-auth {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -399px;
+
+  &:after {
+    @include p(a,f);
+    content: "";
+    background: rgba(0,0,0,0);
+    transition: background 0.2s;
+
+  }
+
+  &:hover:after {
+    background: rgba(0,0,0,0.08);
+  }
+}
+
+.btn-auth-fb {
+  @extend .btn-auth;
+  @include icon(btn-fb);
+}
+
+.btn-auth-vk {
+  @extend .btn-auth;
+  @include icon(btn-vk);
+}
+
+.btn-auth-tw {
+  @extend .btn-auth;
+  @include icon(btn-tw);
+}
+
+.btn-glass {
+  display: block;
+  margin-bottom: 18px;
+  padding: 7px 40px;
+  border-radius: 20px;
+  border: 2px solid;
+  color: #fff;
+  font-size: 21px;
+  vertical-align: top;
+  text-align: center;
+
+  &:hover {
+    background: rgba(0,0,0,0.3);
+  }
+}
+
+.login-system-choice-types {
+  margin: 0 auto;
+  width: 226px;
+}
+
+.login-system-authentication {
+  .login-system_title {
+    margin-bottom: 55px;
+  }
+}
+
+.login-system-registration-company {
+  .login-system-form {
+    border-radius: 10px 10px 0 0;
+    margin-top: -15px;
+  }
+}
+
+.login-system-choice-type {
+  text-align: center;
+
+  .login-system_title {
+    text-indent: 5px;
+  }
+
+  .btn-arrow-back {
+    margin-top: 20px;
+    margin-left: -30px;
+  }
+}
+
+.btn-arrow-back {
+  display: inline-block;
+  color: #fff;
+  font-size: 17px;
+
+  &:before {
+    @include icon(btn-arrow-back);
+    position: relative;
+    top: -1px;
+    left: -2px;
+  }
+}
+
+.form-groups-title {
+  margin: 20px 0 10px;
+  font: bold 13px/normal $text-functional;
+}
+
+#authentication {
+  .field-error {
+    display: none;
+  }
+}
+
+.login-system_agree {
+  float: left;
+
+  & + label {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 0;
+    color: #949494;
+    font-size: 11px;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

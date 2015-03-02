@@ -1,0 +1,167 @@
+.yml-setup {
+  padding-top: 40px;
+
+  input[type="text"].form-control {
+    max-width: 100%;
+    height: 40px;
+    font-size: 15px;
+    padding: 5px 12px 4px;
+    border-radius: 3px;
+
+    &:focus {
+      color: #000;
+      box-shadow: none;
+      border-color: rgb(255,211,211);
+    }
+  }
+}
+
+.yml-setup-content {
+  position: relative;
+  width: getWidthCol(8);
+}
+
+.yml-form-setup-info {
+  margin-top: 22px;
+  color: rgb(103,103,103);
+  font-size: 14px;
+
+  a {
+    color: rgb(24, 63, 153);
+  }
+}
+
+.yml-form-setup-btn {
+  margin-left: 8px;
+  float: right;
+}
+
+.yml-setup-title {
+  text-transform: none;
+}
+
+.yml-setup-label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.yml-setup-subtitle {
+  margin-bottom: 5px;
+  color: rgb(154, 38, 33);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.yml-setup-label + .yml-setup-subtitle {
+  margin-top: -5px;
+}
+
+.yml-setup-link {
+  margin-bottom: 17px;
+  color: rgb(194, 194, 194);
+  font-size: 16px;
+  word-break: break-all;
+}
+
+
+.yml-categories {
+  margin-bottom: 18px;
+}
+
+.yml-categories-row {
+  overflow: hidden;
+  min-height: 44px;
+}
+
+.yml-categories-cell {
+  float: left;
+  width: getWidthCol(4);
+  padding: 7px 15px 6px;
+}
+
+.yml-categories-title {
+  + .yml-categories-title {
+    margin-left: 25px;
+  }
+}
+
+.yml-categories-head {
+  font-weight: 600;
+
+  .yml-categories-cell {
+    padding-top: 12px;
+  }
+}
+
+.yml-category {
+  background: $main-bg;
+
+  &:nth-child(2n) {
+    background: transparent;
+  }
+}
+
+.yml-category-status {
+  position: relative;
+  float: left;
+  width: 25px;
+  height: 45px;
+
+  &:after {
+    @include p(a,f);
+    @include icon(yml-category-status);
+    margin: auto;
+    opacity: 0.25;
+  }
+
+  &.is-linked:after {
+    opacity: 1;
+  }
+}
+
+.yml-category-parents {
+  color: rgb(132, 132, 132);
+  font-size: 12px;
+}
+
+.yml-category-title,
+.yml-category-count {
+  display: inline-block;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.yml-category-title {
+  color: #000;
+  font-weight: 600;
+}
+
+.yml-category-count {
+  margin-left: 5px;
+  color: rgb(134, 23, 25);
+}
+
+.yml-category-action {
+  display: inline-block;
+  color: rgb(59, 121, 211);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.yml-category-action__connect {
+  position: relative;
+  top: 6px;
+}
+
+.yml-category-action__disconnect {
+  float: right;
+}
+
+.yml-setup-aside {
+  @include p(a,23px,'','',100%);
+  display: block;
+  width: getWidthCol(4);
+  margin-left: 25px;
+}
+

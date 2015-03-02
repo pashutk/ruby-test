@@ -1,0 +1,18 @@
+.admin-panel {
+  padding: 7px 0 10px;
+  background: #fff;
+
+  a {
+    font: 11px/normal "Tahoma";
+    color: rgb(0,136,238);
+  }
+
+  border-bottom: 1px solid $main-bg;
+}
+
+.admin-panel-title {
+  display: inline-block;
+  margin-right: 3px;
+  color: rgb(63,63,63);
+  font: bold 12px/normal "Tahoma";
+}

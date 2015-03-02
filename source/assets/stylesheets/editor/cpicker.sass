@@ -1,0 +1,31 @@
+.Cpicker
+  $width: 25px
+  $height: 25px
+
+  .Cpicker-input
+    width: $width
+    height: $height
+    cursor: pointer
+    border: solid 1px black
+
+  .Cpicker-list
+    list-style-type: none
+    display: block
+    position: absolute
+    z-index: 1000
+    padding: 0px
+    margin: 0px
+    width: 9 * $width
+    line-height: 0px
+    border: solid 1px white
+    background-color: white
+    text-align: left
+
+    .Cpicker-item
+      display: inline-block
+      cursor: pointer
+      padding: 0px
+      margin: 0px
+      width: $width
+      height: $height
+

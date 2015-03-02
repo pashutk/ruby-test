@@ -1,0 +1,46 @@
+.photobox {
+  @include p('f',0,0,0,0);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 20;
+  transition: opacity 0.15s;
+}
+
+.photobox.photobox-page {
+  position: relative;
+}
+
+.photobox-close {
+  @include p(a,19px,19px);
+  @extend .close;
+  @extend .close-main;
+  @extend .tooltip-pseudo;
+  margin-right: 0;
+}
+
+.photobox-close-primary {
+  @include p(a,15px,15px);
+  @include hoverableFade('.photo-show-main');
+}
+
+.photobox-dialog {
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.photobox.photobox-show {
+  visibility: visible;
+  opacity: 1;
+
+  .photobox-dialog {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.photobox-cache {
+  height: 100%;
+}

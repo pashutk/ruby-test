@@ -1,0 +1,114 @@
+.photo-editor {
+  position: relative;
+}
+
+.photo-editor-nav {
+  @include p(a,20px,0,'',0);
+  margin: 0 auto;
+  width: 115px;
+  padding: 0 20px;
+  z-index: 2;
+  text-align: center;
+}
+
+.photo-editor-nav-l {
+  @include p(a,-2px,'','',0);
+  @include marvin-icon(arrow-left-black);
+}
+
+.photo-editor-nav-r {
+  @include p(a,-2px,0,'','');
+  @include marvin-icon(arrow-right-black);
+}
+
+.photo-editor-counter {
+  display: inline-block;
+  color: rgb(0,0,0);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.photo-editor-counter-count {
+  display: inline-block;
+}
+
+.photo-editor-counter-current {
+  display: inline-block;
+}
+
+.photo-editor-item-settings {
+  bottom: 66px;
+  text-align: right;
+  position: absolute;
+  right: 6px;
+  padding: 5px;
+  background: rgba(224, 224, 224, 0.76);
+  padding-bottom: 0px;
+}
+
+.photo-editor-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 50px;
+  text-align: center;
+  border: 1px dashed transparent;
+
+  .photo-editor:hover & {
+    border-color: rgba(255,127,127,0.5);
+  }
+}
+
+.photo-editor-item {
+  margin: 0 auto;
+  //max-width: 80%;
+}
+
+.photo-editor-caption-edit {
+  max-width: 450px;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+  resize: none;
+  text-align: center;
+
+  &:focus {
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+}
+
+.photo-editor-thumbs {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #f8f8f8;
+  padding-right: 50px;
+  min-height: 54px;
+  padding: 5px;
+
+  .photo-editor-add {
+    @include p(a,18px,18px);
+    @include marvin-icon(plugin-photo-add);
+  }
+
+  .photo-item {
+    float: left;
+    margin: 0 4px 0 0;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    height: 44px;
+  }
+}
+
+
+.photo-editor-item-delete {
+  @include p(a,23px,15px);
+  @include editor-close-main;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+}
